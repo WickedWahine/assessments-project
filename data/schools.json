@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Addison Elementary",
+        "short_name": "Addison",
+        "letter_code": "AD"
+    },
+    {
+        "name": "Juana Briones Elementary",
+        "short_name": "Briones",
+        "letter_code": "JB"
+    },
+    {
+        "name": "Duveneck Elementary",
+        "short_name": "Duveneck",
+        "letter_code": "DV"
+    },
+    {
+        "name": "District Office",
+        "short_name": "District Office",
+        "letter_code": "DO"
+    }
+]

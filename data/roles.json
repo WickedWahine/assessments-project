@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Super admin",
+        "description": "Can manage database"
+    },
+    {
+        "name": "Admin",
+        "description": "Can create assessments, manage whole district data"
+    },
+    {
+        "name": "District View",
+        "description": "Can view scores for whole district"
+    },
+    {
+        "name": "Principal View",
+        "description": "Can view scores for whole school"
+    },
+    {
+        "name": "Teacher",
+        "description": "Can enter scores for own students, can view scores for own students"
+    }
+]

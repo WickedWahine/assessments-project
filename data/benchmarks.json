@@ -1,0 +1,128 @@
+[
+    {
+        "assessment_id": "1",
+        "grade": "KN",
+        "term": "Fall",
+        "level": "None",
+        "cutoff": "0"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "1",
+        "term": "Fall",
+        "level": "Meets",
+        "cutoff": "3"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "2",
+        "term": "Fall",
+        "level": "Meets",
+        "cutoff": "10"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "3",
+        "term": "Fall",
+        "level": "Meets",
+        "cutoff": "13"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "4",
+        "term": "Fall",
+        "level": "Meets",
+        "cutoff": "16"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "5",
+        "term": "Fall",
+        "level": "Meets",
+        "cutoff": "19"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "KN",
+        "term": "Winter",
+        "level": "Meets",
+        "cutoff": "2"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "1",
+        "term": "Winter",
+        "level": "Meets",
+        "cutoff": "7"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "2",
+        "term": "Winter",
+        "level": "Meets",
+        "cutoff": "11"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "3",
+        "term": "Winter",
+        "level": "Meets",
+        "cutoff": "15"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "4",
+        "term": "Winter",
+        "level": "Meets",
+        "cutoff": "18"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "5",
+        "term": "Winter",
+        "level": "Meets",
+        "cutoff": "21"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "KN",
+        "term": "Spring",
+        "level": "Meets",
+        "cutoff": "3"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "1",
+        "term": "Spring",
+        "level": "Meets",
+        "cutoff": "10"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "2",
+        "term": "Spring",
+        "level": "Meets",
+        "cutoff": "13"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "3",
+        "term": "Spring",
+        "level": "Meets",
+        "cutoff": "16"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "4",
+        "term": "Spring",
+        "level": "Meets",
+        "cutoff": "19"
+    },
+    {
+        "assessment_id": "1",
+        "grade": "5",
+        "term": "Spring",
+        "level": "Meets",
+        "cutoff": "22"
+    }
+]
