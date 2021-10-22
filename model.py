@@ -48,7 +48,7 @@ class Benchmark(db.Model):
     __tablename__ = "benchmarks"
 
     benchmark_id = db.Column(db.Integer,
-                        #autoincrement=True,
+                        autoincrement=True,
                         primary_key=True)
     assessment_id = db.Column(db.Integer,db.ForeignKey('assessments.assessment_id'))
     grade = db.Column(db.String, nullable=False)
@@ -186,9 +186,9 @@ class Student_Assessment(db.Model):
     student_assessment_id = db.Column(db.Integer,
                         autoincrement=True,
                         primary_key=True)
+    local_id = db.Column(db.Integer, db.ForeignKey('students.local_id'))
     scoring_term_id = db.Column(db.Integer, db.ForeignKey('scoring_terms.scoring_term_id'))
-    student_id = db.Column(db.Integer, db.ForeignKey('students.student_id'))
-    exemption_id = db.Column(db.Integer, db.ForeignKey('exemptions.exemption_id'))
+    exemption_id = db.Column(db.Integer, db.ForeignKey('exemptions.exemption_id'), nullable=True)
     score = db.Column(db.String)
     benchmark_id = db.Column(db.Integer)
     date_taken = db.Column(db.Date)
@@ -200,7 +200,7 @@ class Student_Assessment(db.Model):
     exemption = db.relationship("Exemption", backref="student_assessments")
 
     def __repr__(self):
-        return f'<Student_Assessment student_id={self.student_id} score={self.score} date_taken={self.date_taken}>'
+        return f'<Student_Assessment local_id={self.local_id} score={self.score} date_taken={self.date_taken}>'
 
 
 class User(db.Model):

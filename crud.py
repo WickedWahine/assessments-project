@@ -116,8 +116,7 @@ def create_school(name, short_name, letter_code):
 def create_scoring_term(assessment_id, academic_year_id, term, date_open, date_close):
     """Create and return a scoring term."""
 
-    scoring_term = Scoring_Term(
-                    assessment_id=assessment_id,
+    scoring_term = Scoring_Term(assessment_id=assessment_id,
                     academic_year_id=academic_year_id,
                     term=term,
                     date_open=date_open,
@@ -147,12 +146,12 @@ def create_student(local_id, state_id, first_name, last_name):
 #create_student(1234567, 987654321, "Grace", "Hopper")
 
 
-def create_student_assessments(assessment_year_id, local_id, exemption_id, score, benchmark_id, date_taken):
+def create_student_assessment(local_id, scoring_term_id, exemption_id, score, benchmark_id, date_taken):
     """Create and return exemptions of an assessment for a given student."""
 
     student_assessment = Student_Assessment(
-                    assessment_year_id=assessment_year_id,
                     local_id=local_id,
+                    scoring_term_id=scoring_term_id,
                     exemption_id=exemption_id,
                     score=score,
                     benchmark_id=benchmark_id,
@@ -169,8 +168,7 @@ def create_student_assessments(assessment_year_id, local_id, exemption_id, score
 def create_user(staff_id, first_name, last_name, username, password, role_id, active_status):
     """Create and return a new user."""
 
-    user = User(
-                staff_id=staff_id,
+    user = User(staff_id=staff_id,
                 first_name=first_name,
                 last_name=last_name,
                 username=username,

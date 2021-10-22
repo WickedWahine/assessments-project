@@ -16,6 +16,8 @@ import crud, model, server
 import os, json
 from datetime import datetime
 
+json.loads('{}')
+
 os.system("dropdb ratings")
 os.system("createdb ratings")
 model.connect_to_db(server.app)
@@ -140,7 +142,9 @@ with open("data/users.json") as f:
         username = user["username"]
         password = user["password"]
         role_id = user["role_id"]
-        active_status = user["active_status"]
+       
+        # bool("True") ---> True
+        active_status = bool(user["active_status"])
 
         user = crud.create_user(staff_id, first_name, last_name, username, password, role_id, active_status)
         users_in_db.append(user)
@@ -200,6 +204,7 @@ with open("data/scoring_terms.json") as f:
         assessment_id = scoring_term["assessment_id"]
         academic_year_id = scoring_term["academic_year_id"]
         term = scoring_term["term"]
+
         date_open = datetime.strptime(scoring_term["date_open"], "%m/%d/%Y")
         date_close = datetime.strptime(scoring_term["date_close"], "%m/%d/%Y")
 
@@ -217,14 +222,16 @@ with open("data/student_assessments.json") as f:
     student_assessments_in_db = []
     for student_assessment in student_assessment_data:
 
-        scoring_term_id = student_assessment["scoring_term_id"]
         local_id = student_assessment["local_id"]
+        scoring_term_id = student_assessment["scoring_term_id"]
+        
+        # cast to ensure empty strings are converted into int
         exemption_id = student_assessment["exemption_id"]
         score = student_assessment["score"]
         benchmark_id = student_assessment["benchmark_id"]
         date_taken = datetime.strptime(student_assessment["date_taken"], "%m/%d/%Y")
 
-        student_assessment = crud.create_student_assessment(scoring_term_id, local_id,
+        student_assessment = crud.create_student_assessment(local_id, scoring_term_id,
                                                             exemption_id, score, 
                                                             benchmark_id, date_taken)
         student_assessments_in_db.append(student_assessment)
