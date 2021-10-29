@@ -16,10 +16,9 @@ import crud, model, server
 import os, json
 from datetime import datetime
 
-json.loads('{}')
+os.system("dropdb assdb")
+os.system("createdb assdb")
 
-os.system("dropdb ratings")
-os.system("createdb ratings")
 model.connect_to_db(server.app)
 model.db.create_all()
 
@@ -117,12 +116,12 @@ with open("data/students.json") as f:
     students_in_db = []
     for student in student_data:
 
-        local_id = student["local_id"]
+        student_id = student["student_id"]
         state_id = student["state_id"]
         first_name = student["first_name"]
         last_name = student["last_name"]
 
-        student = crud.create_student(local_id, state_id, first_name, last_name)
+        student = crud.create_student(student_id, state_id, first_name, last_name)
         students_in_db.append(student)
         
     f.close()
@@ -182,12 +181,12 @@ with open("data/rosters.json") as f:
     for roster in roster_data:
 
         school_id = roster["school_id"]
-        local_id = roster["local_id"]
+        student_id = roster["student_id"]
         user_id = roster["user_id"]
         grade = roster["grade"]
         academic_year_id = roster["academic_year_id"]
 
-        roster = crud.create_roster(school_id, local_id, user_id, grade, academic_year_id)
+        roster = crud.create_roster(school_id, student_id, user_id, grade, academic_year_id)
         rosters_in_db.append(roster)
         
     f.close()
@@ -222,7 +221,7 @@ with open("data/student_assessments.json") as f:
     student_assessments_in_db = []
     for student_assessment in student_assessment_data:
 
-        local_id = student_assessment["local_id"]
+        student_id = student_assessment["student_id"]
         scoring_term_id = student_assessment["scoring_term_id"]
         
         # cast to ensure empty strings are converted into int
@@ -231,9 +230,17 @@ with open("data/student_assessments.json") as f:
         benchmark_id = student_assessment["benchmark_id"]
         date_taken = datetime.strptime(student_assessment["date_taken"], "%m/%d/%Y")
 
-        student_assessment = crud.create_student_assessment(local_id, scoring_term_id,
+        student_assessment = crud.create_student_assessment(student_id, scoring_term_id,
                                                             exemption_id, score, 
                                                             benchmark_id, date_taken)
         student_assessments_in_db.append(student_assessment)
         
     f.close()
+
+
+# crud.create_student(4384193, 23131222026, 'Thu', 'Nguyen')
+# crud.create_student(4384194, 23131202455, 'Chaskin', 'Saroff')
+# crud.create_student(4384195, 23131202467, 'Loan', 'Truong')
+# crud.create_roster(2, 4384193, 49, '2', 5)
+# crud.create_roster(2, 4384194, 49, '2', 5)
+# crud.create_roster(2, 4384195, 49, '2', 5)

@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
+
 class Academic_Year(db.Model):
     """An academic year."""
 
@@ -104,7 +105,7 @@ class Roster(db.Model):
                         autoincrement=True,
                         primary_key=True)
     school_id = db.Column(db.Integer, db.ForeignKey('schools.school_id'))
-    local_id = db.Column(db.Integer, db.ForeignKey('students.local_id'))
+    student_id = db.Column(db.Integer, db.ForeignKey('students.student_id'))
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
     grade = db.Column(db.String, nullable=False)
     academic_year_id = db.Column(db.Integer, db.ForeignKey('academic_years.academic_year_id'))
@@ -164,9 +165,9 @@ class Student(db.Model):
     __tablename__ = "students"
 
     student_id = db.Column(db.Integer,
-                        autoincrement=True,
+                        #autoincrement=True,
                         primary_key=True)
-    local_id = db.Column(db.Integer, unique=True)
+    #local_id = db.Column(db.Integer, unique=True)
     state_id = db.Column(db.BigInteger, unique=True)
     first_name = db.Column(db.String)
     last_name = db.Column(db.String)
@@ -186,7 +187,7 @@ class Student_Assessment(db.Model):
     student_assessment_id = db.Column(db.Integer,
                         autoincrement=True,
                         primary_key=True)
-    local_id = db.Column(db.Integer, db.ForeignKey('students.local_id'))
+    student_id = db.Column(db.Integer, db.ForeignKey('students.student_id'))
     scoring_term_id = db.Column(db.Integer, db.ForeignKey('scoring_terms.scoring_term_id'))
     exemption_id = db.Column(db.Integer, db.ForeignKey('exemptions.exemption_id'), nullable=True)
     score = db.Column(db.String)
@@ -200,7 +201,7 @@ class Student_Assessment(db.Model):
     exemption = db.relationship("Exemption", backref="student_assessments")
 
     def __repr__(self):
-        return f'<Student_Assessment local_id={self.local_id} score={self.score} date_taken={self.date_taken}>'
+        return f'<Student_Assessment student_id={self.student_id} score={self.score} date_taken={self.date_taken}>'
 
 
 class User(db.Model):

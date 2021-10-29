@@ -80,12 +80,11 @@ def create_role(name, description):
 #create_role("Queen", "Can delegate everything to others :-)")
 
 
-def create_roster(school_id, local_id, user_id, grade, academic_year_id):
+def create_roster(school_id, student_id, user_id, grade, academic_year_id):
     """Create and return a roster."""
 
-    roster = Roster(
-                    school_id=school_id,
-                    local_id=local_id,
+    roster = Roster(school_id=school_id,
+                    student_id=student_id,
                     user_id=user_id,
                     grade=grade,
                     academic_year_id=academic_year_id)
@@ -130,10 +129,10 @@ def create_scoring_term(assessment_id, academic_year_id, term, date_open, date_c
 #create_scoring_term(21, "2025-2026", "Fall", "8/1/2025", "11/30/2026")
 
 
-def create_student(local_id, state_id, first_name, last_name):
+def create_student(student_id, state_id, first_name, last_name):
     """Create and return a benchmark."""
 
-    student = Student(local_id=local_id,
+    student = Student(student_id=student_id,
                     state_id=state_id,
                     first_name=first_name,
                     last_name=last_name)
@@ -146,11 +145,11 @@ def create_student(local_id, state_id, first_name, last_name):
 #create_student(1234567, 987654321, "Grace", "Hopper")
 
 
-def create_student_assessment(local_id, scoring_term_id, exemption_id, score, benchmark_id, date_taken):
+def create_student_assessment(student_id, scoring_term_id, exemption_id, score, benchmark_id, date_taken):
     """Create and return exemptions of an assessment for a given student."""
 
     student_assessment = Student_Assessment(
-                    local_id=local_id,
+                    student_id=student_id,
                     scoring_term_id=scoring_term_id,
                     exemption_id=exemption_id,
                     score=score,
@@ -187,71 +186,128 @@ def create_user(staff_id, first_name, last_name, username, password, role_id, ac
 
 ########## Get ALL records of a table ##########
 
-def return_all_academic_years():
+def all_academic_years():
     """Query to list all academic years"""
 
     return Academic_Year.query.all()
 
 
-def return_all_assessments():
+def all_assessments():
     """Query to list all assessments"""
 
     return Assessment.query.all()
 
 
-def return_all_benchmarks():
+def all_benchmarks():
     """Query to list all benchmarks"""
 
     return Benchmark.query.all()
 
 
-def return_all_exemptions():
+def all_exemptions():
     """Query to list all exemptions"""
 
     return Exemption.query.all()
 
 
-def return_all_roles():
+def all_roles():
     """Query to list all roles"""
 
     return Role.query.all()
 
 
-def return_all_rosters():
+def all_rosters():
     """Query to list all rosters"""
 
     return Roster.query.all()
 
 
-def return_all_schools():
+def all_schools():
     """Query to list all schools"""
 
     return School.query.all()
 
 
-def return_all_scoring_terms():
+def all_scoring_terms():
     """Query to list all scoring terms"""
 
     return Scoring_Term.query.all()
 
 
-def return_all_student_assessments():
+def all_student_assessments():
     """Query to list all student assessments data"""
 
     return Student_Assessment.query.all()
 
 
-def return_all_students():
+def all_students():
     """Query to list all students"""
 
     return Student.query.all()
 
 
-def return_all_users():
+def all_users():
     """Query to list all users"""
 
     return User.query.all()
 
+
+
+########## Get ALL records of joins ##########
+
+# def rosters_teachers_students_join_by_grade():
+#     """Query to list all rostered students and teachers, group by grade"""
+    
+#     rostered_teachers_students = (Student.query
+#                         .join(Roster)
+#                         .filter(Roster.student_id==Student.student_id)
+#                         .all())
+                        
+#     return rostered_teachers_students
+
+
+########## Get records of joins by various parameters ##########
+
+# def students_by_teacher(academic_year_id, user_id):
+#     """Query to list students in a teacher's class"""
+
+#     students_by_teacher = (Student
+#                             .query
+#                             .join(Roster, Roster.student_id == Student.student_id)
+#                             .join(Academic_Year, Roster.academic_year_id == Academic_Year.academic_year_id)
+#                             .filter(Roster.academic_year_id == academic_year_id)
+#                             .filter(Roster.user_id == user_id)
+#                             .all())
+
+#     return students_by_teacher
+
+
+# def students_by_grade(grade, academic_year_id, user_id):
+#     """Query to list students in a grade"""
+
+#     students_by_grade = (Roster.query
+#                             .options(db.joinedload("student"))
+#                             .options(db.joinedload("user"))
+#                             .filter_by(grade=grade)
+#                             .filter_by(academic_year_id=academic_year_id)
+#                             .filter_by(user_id=user_id)
+#                             .all())
+
+#     return students_by_grade
+
+
+# def students_by_grade(grade, academic_year_id):
+#     """Query to list students in a grade"""
+
+#     students_by_grade = (Student
+#                             .query
+#                             .join(Roster, Roster.student_id == Student.student_id)
+#                             .join(Academic_Year, Roster.academic_year_id == Academic_Year.academic_year_id)
+#                             .filter(Roster.grade == grade)
+#                             .filter(Roster.academic_year_id == academic_year_id)
+#                             .all())
+
+#     return students_by_grade
 
 
 ########## Get record by ID ##########
@@ -286,10 +342,16 @@ def get_role_by_id(id):
     return Role.query.get(id)
 
 
-def get_roster_by_id(id):
-    """Query roster by ID"""
+def get_student_roster_by_teacher(user_id, school_id, grade, academic_year_id):
+    """ Query to list students by teacher, school, grade, academic year.
+        Since roster is what ties then tgt, we use the object Roster.
+    """
 
-    return Roster.query.get(id)
+    student_roster = (Roster.query
+                    .filter_by(user_id=user_id, school_id=school_id, grade=grade, academic_year_id=academic_year_id)
+                    .all())
+
+    return student_roster
 
 
 def get_school_by_id(id):
@@ -343,22 +405,10 @@ def get_assessment_by_name(name):
     return Assessment.query.filter_by(name=name).first()
 
 
-def get_exemption_by_reason(reason):
-    """Query exemption by reason"""
-
-    return Exemption.query.filter_by(reason=reason).first()
-
-
 def get_role_by_name(name):
     """Query role by name"""
 
     return Role.query.filter_by(name=name).first()
-
-
-def get_school_by_name(name):
-    """Query user by name"""
-
-    return School.query.filter_by(name=name).first()
 
 
 def get_school_by_short_name(short_name):
@@ -373,16 +423,10 @@ def get_school_by_letter_code(letter_code):
     return School.query.filter_by(letter_code=letter_code).first()
     
 
-def get_student_by_local_id(local_id):
-    """Query user by local ID"""
+def get_student_by_student_id(student_id):
+    """Query user by student ID"""
 
-    return Student.query.filter_by(local_id=local_id).first()
-
-
-def get_student_by_state_id(state_id):
-    """Query user by state ID"""
-
-    return Student.query.filter_by(state_id=state_id).first()
+    return Student.query.filter_by(student_id=student_id).all()
 
 
 def get_user_by_username(username):
@@ -428,30 +472,6 @@ def get_roster_by_school_letter_code(school_letter_code):
     """Query rosters by school_letter_code"""
 
     return Roster.query.filter_by(school_letter_code=school_letter_code)
-
-
-def get_roster_by_student_id(student_id):
-    """Query rosters by student_id"""
-
-    return Roster.query.filter_by(student_id=student_id)
-
-
-def get_roster_by_student_local_id(student_local_id):
-    """Query rosters by student_local_id"""
-
-    return Roster.query.filter_by(student_local_id=student_local_id)
-
-
-def get_roster_by_student_state_id(student_state_id):
-    """Query rosters by student_state_id"""
-
-    return Roster.query.filter_by(student_state_id=student_state_id)
-
-
-def get_roster_by_user_id(user_id):
-    """Query rosters by user_id"""
-
-    return Roster.query.filter_by(user_id=user_id)
 
 
 def get_scoring_term_by_academic_year_id(academic_year_id):
