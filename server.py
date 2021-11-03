@@ -63,6 +63,7 @@ def login_user():
 
     return redirect('/')
 
+
 # @app.route('/<assessment_name>/entries', methods="GET")
 # def get_assessment_results():
 
@@ -71,15 +72,12 @@ def login_user():
 def record_entries(assessment_name):
 
     date_taken = date.today()
-    # teacher_first = request.args.get('teacher.first_name')
-    # teacher_last = request.args.get('teacher.last_name')
-    # teacher_username = request.arges.get('teacher.username')
+    
     teacher = {"first_name": request.form.get('teacher_first'),
                 "last_name": request.form.get('teacher_last'),
                 "username": request.form.get('teacher_username')}
     print(f"teacher is {teacher}")
 
-    # Hard-coding Assessment name
     assessment_name = assessment_name
 
     # Find Assessment ID for this assessment
