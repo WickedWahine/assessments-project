@@ -18,8 +18,11 @@ def index():
     return render_template('homepage.html')
 
 
-@app.route('/bas')
+@app.route('/assessment/')
 def students_by_teacher():
+
+    assessment_name = request.args.get("assessment_name").upper()
+    print(assessment_name)
 
     # Temporarily hard code parameters
     test_user_id = 49
@@ -36,7 +39,13 @@ def students_by_teacher():
     teacher = crud.get_user_by_id(test_user_id)
     today = date.today().strftime("%m/%d/%y")
 
-    return render_template('bas.html', students=students, rosters=rosters, teacher=teacher, student_ass=student_ass, today=today)
+    return render_template(f"/assessment.html", 
+                            assessment_name=assessment_name, 
+                            students=students, 
+                            rosters=rosters, 
+                            teacher=teacher, 
+                            student_ass=student_ass, 
+                            today=today)
 
 
 @app.route('/login', methods=['POST'])
@@ -58,19 +67,26 @@ def login_user():
 # def get_assessment_results():
 
 
-@app.route('/bas/entries', methods=['POST'])
-def record_entries():
+@app.route('/assessment/<assessment_name>', methods=['POST'])
+def record_entries(assessment_name):
 
     date_taken = date.today()
+    # teacher_first = request.args.get('teacher.first_name')
+    # teacher_last = request.args.get('teacher.last_name')
+    # teacher_username = request.arges.get('teacher.username')
+    teacher = {"first_name": request.form.get('teacher_first'),
+                "last_name": request.form.get('teacher_last'),
+                "username": request.form.get('teacher_username')}
+    print(f"teacher is {teacher}")
 
     # Hard-coding Assessment name
-    ass_name = "BAS"
+    assessment_name = assessment_name
 
     # Find Assessment ID for this assessment
-    ass_id = crud.get_assessment_id_by_name(ass_name).assessment_id
+    assessment_id = crud.get_assessment_id_by_name(assessment_name).assessment_id
 
     # Given Assessment ID and date taken, get Scoring Term ID
-    scoring_term_id = crud.get_scoring_term_id_by_assessement_id_and_date_taken(ass_id, date_taken).scoring_term_id
+    scoring_term_id = crud.get_scoring_term_id_by_assessement_id_and_date_taken(assessment_id, date_taken).scoring_term_id
 
     # for k, v in request.form.items():
     #     entry_dict.append({k: v})
@@ -81,20 +97,16 @@ def record_entries():
     exemption_ids = request.form.getlist('exemption_id')
 
     for i, sid in enumerate(student_ids):
-        entries.append({sid: {'student_id': sid, 'score': scores[i], 'exemption_id': exemption_ids[i]}})
+        entries.append({'student_id': sid, 'score': scores[i], 'exemption_id': exemption_ids[i]})
     
     print(pprint(entries))
-
-    # if score.isdigit():
-    #     score_int = int(score)
-    #     if score_int > -1 and score_int < 101:
-    #         crud.create_rating(score, movie, user)
-    #         flash("Created rating!")
-    #     else:
-    #         flash("Rating not within valid range!")
-    # else:
-    #     flash("Not an integer!")
-    return redirect('/')
+    print(f"assessment {assessment_name}")
+    print(f"teacher {teacher}")
+    
+    return render_template('report.html', 
+                            teacher=teacher,
+                            assessment_name=assessment_name, 
+                            entries=entries)
 
 
 # @app.route('/movies/<movie_id>/rate', methods=['POST'])
