@@ -253,87 +253,28 @@ def all_users():
 
 
 
-########## Get ALL records of joins ##########
+########## Get record by a parameter ##########
 
-# def rosters_teachers_students_join_by_grade():
-#     """Query to list all rostered students and teachers, group by grade"""
-    
-#     rostered_teachers_students = (Student.query
-#                         .join(Roster)
-#                         .filter(Roster.student_id==Student.student_id)
-#                         .all())
-                        
-#     return rostered_teachers_students
+def get_assessment_id_by_name(name):
+    """Query assessment ID by its name"""
+
+    return Assessment.query.filter(Assessment.name==name).one()
 
 
-########## Get records of joins by various parameters ##########
+def get_scoring_term_id_by_assessement_id_and_date_taken(assessment_id, date_taken):  
+    """Query scoring term ID by assessment ID and date taken"""
 
-# def students_by_teacher(academic_year_id, user_id):
-#     """Query to list students in a teacher's class"""
+    scoring_term_id = (Scoring_Term.query
+                        .filter(Scoring_Term.assessment_id==assessment_id, Scoring_Term.date_open<=date_taken, Scoring_Term.date_close>=date_taken)
+                        .one())
 
-#     students_by_teacher = (Student
-#                             .query
-#                             .join(Roster, Roster.student_id == Student.student_id)
-#                             .join(Academic_Year, Roster.academic_year_id == Academic_Year.academic_year_id)
-#                             .filter(Roster.academic_year_id == academic_year_id)
-#                             .filter(Roster.user_id == user_id)
-#                             .all())
-
-#     return students_by_teacher
-
-
-# def students_by_grade(grade, academic_year_id, user_id):
-#     """Query to list students in a grade"""
-
-#     students_by_grade = (Roster.query
-#                             .options(db.joinedload("student"))
-#                             .options(db.joinedload("user"))
-#                             .filter_by(grade=grade)
-#                             .filter_by(academic_year_id=academic_year_id)
-#                             .filter_by(user_id=user_id)
-#                             .all())
-
-#     return students_by_grade
-
-
-# def students_by_grade(grade, academic_year_id):
-#     """Query to list students in a grade"""
-
-#     students_by_grade = (Student
-#                             .query
-#                             .join(Roster, Roster.student_id == Student.student_id)
-#                             .join(Academic_Year, Roster.academic_year_id == Academic_Year.academic_year_id)
-#                             .filter(Roster.grade == grade)
-#                             .filter(Roster.academic_year_id == academic_year_id)
-#                             .all())
-
-#     return students_by_grade
-
-
-########## Get record by ID ##########
-
-def get_academic_year_by_id(id):
-    """Query academic year by ID"""
-
-    return Academic_Year.query.get(id)
-
-
-def get_assessment_by_id(id):
-    """Query assessment by ID"""
-
-    return Assessment.query.get(id)
+    return scoring_term_id
 
 
 def get_benchmark_by_id(id):
     """Query benchmark by ID"""
 
     return Benchmark.query.get(id)
-
-
-def get_exemption_by_id(id):
-    """Query exemption by ID"""
-
-    return Exemption.query.get(id)
 
 
 def get_role_by_id(id):
@@ -358,12 +299,6 @@ def get_school_by_id(id):
     """Query school by ID"""
 
     return School.query.get(id)
-
-
-def get_scoring_term_by_id(id):
-    """Query scoring term by ID"""
-
-    return Scoring_Term.query.get(id)
 
 
 def get_student_assessment_by_id(id):

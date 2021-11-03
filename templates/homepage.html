@@ -4,11 +4,40 @@
 {% block body %}
   <h1>Welcome!</h1>
 
+
   <h2>Navigation</h2>
+  <form action="" method="GET">
+    <select name="assessment_name">
+      <option value="bas">BAS</option>
+    </select>
+  </form>
   <ul>
-    <li><a href="/data_entry">Enter assessment scores</a></li>
-    <li><a href="/view_report">View all assessment scores</a></li>
+    <li><a href="/bas">Enter BAS assessment scores</a></li>
+    <li>View assessment scores</a></li>
   </ul>
+
+
+  <h2>Log In</h2>
+  <form action="/login" method="POST">
+    <p>
+      Email <input type="text" name="email">
+    </p>
+
+    <p>
+      Password <input type="password" name="password">
+    </p>
+
+    <p>
+      <input type="submit" name="Login">
+    </p>
+  </form>
+
+  <!-- <form action="/logout" method="POST">
+    <p>
+      <input type="submit" value="Logout">
+    </p>
+  </form> -->
+
 
   <!-- <h2>Create an Account</h2>
   <form action="/users" method="POST">
@@ -24,20 +53,5 @@
       <input type="submit">
     </p>
   </form> -->
-
-  <h2>Log In</h2>
-  <form action="/login" method="POST">
-    <p>
-      Email <input type="text" name="email">
-    </p>
-
-    <p>
-      Password <input type="password" name="password">
-    </p>
-
-    <p>
-      <input type="submit">
-    </p>
-  </form>
 
 {% endblock %}
