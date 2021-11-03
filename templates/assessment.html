@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Entering scores for {{assessment_name}} assessment{% endblock %}
+
+{% block body %}
+
+<h1>Assessment name: {{assessment_name}}</h1>
+<h2>Hello {{teacher.first_name}} {{teacher.last_name}}</h2>
+<h3></h3>our email is {{teacher.username}}</h3>
+<h4>Today is {{today}}</h4>
+
+
+  <form action="/assessment/{{assessment_name}}" method="POST">
+    <table>
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Student ID</th>
+          <th>Score</th>
+          <th>Exemption</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+        <tr>
+          <td>{{student.first_name}} {{student.last_name}}</td>
+          <td>{{student.student_id}}</td>
+          <td><input type="hidden" name="student_id" value="{{student.student_id}}"></td>
+          <td><input type="text" name="score"></td>
+          <td><select name="exemption_id">
+            <option value="">Select exemption, if applicable</option>
+              <option value="2">Absent for entire testing window</option>
+              <option value="3">Alternate assessment per IEP</option>
+          </select></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <input type="submit" value="Save">
+    <input type="hidden" name="teacher_first" value="{{teacher.first_name}}">
+    <input type="hidden" name="teacher_last" value="{{teacher.last_name}}">
+    <input type="hidden" name="teacher_username" value="{{teacher.username}}">
+</form>
+
+{% endblock %}
