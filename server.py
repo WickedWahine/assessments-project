@@ -18,6 +18,25 @@ def index():
     return render_template('homepage.html')
 
 
+@app.route('/login', methods=['POST'])
+def process_login():
+    """Process user login."""
+
+    username = request.form.get("username")
+    password = request.form.get("password")
+
+    user = crud.get_user_by_username(username)
+    
+    if not user or user.password != password:
+        flash("The email or password you entered was incorrect.")
+    else:
+        # Log in user by storing the user's email in session
+        session["username"] = username
+        flash(f"Welcome, {user.first_name} {user.last_name}!")
+
+    return redirect("/")
+
+
 @app.route('/assessment/')
 def students_by_teacher():
 
@@ -25,18 +44,20 @@ def students_by_teacher():
     print(assessment_name)
 
     # Temporarily hard code parameters
-    test_user_id = 49
+    # test_user_id = 49
+    username = session.get("username")
+    user_id = crud.get_user_by_username(username).user_id
     test_school_id = 2
     test_grade = "2"
     test_academic_year_id = 5
 
-    students = crud.get_student_roster_by_teacher(test_user_id, test_school_id, test_grade, test_academic_year_id)
+    students = crud.get_student_roster_by_teacher(user_id, test_school_id, test_grade, test_academic_year_id)
     students = [student.student for student in students]
     students.sort(key=lambda student: student.first_name)
     
     student_ass = [student.student_assessments for student in students]
     rosters = [student.rosters for student in students]
-    teacher = crud.get_user_by_id(test_user_id)
+    teacher = crud.get_user_by_username(username)
     today = date.today().strftime("%m/%d/%y")
 
     return render_template(f"/assessment.html", 
@@ -48,26 +69,6 @@ def students_by_teacher():
                             today=today)
 
 
-@app.route('/login', methods=['POST'])
-def login_user():
-    username = request.form.get('username')
-    password = request.form.get('password')
-
-    user = crud.get_user_by_username(username)
-    
-    if password == user.password:
-        session['id'] = user.user_id
-        flash("Logged in!")
-    else:
-        flash("Authentication failed!")
-
-    return redirect('/')
-
-
-# @app.route('/<assessment_name>/entries', methods="GET")
-# def get_assessment_results():
-
-
 @app.route('/assessment/<assessment_name>', methods=['POST'])
 def record_entries(assessment_name):
 
@@ -76,7 +77,6 @@ def record_entries(assessment_name):
     teacher = {"first_name": request.form.get('teacher_first'),
                 "last_name": request.form.get('teacher_last'),
                 "username": request.form.get('teacher_username')}
-    print(f"teacher is {teacher}")
 
     assessment_name = assessment_name
 
@@ -84,7 +84,7 @@ def record_entries(assessment_name):
     assessment_id = crud.get_assessment_id_by_name(assessment_name).assessment_id
 
     # Given Assessment ID and date taken, get Scoring Term ID
-    scoring_term_id = crud.get_scoring_term_id_by_assessement_id_and_date_taken(assessment_id, date_taken).scoring_term_id
+    scoring_term_id = crud.get_scoring_term_by_assessement_id_and_date_taken(assessment_id, date_taken).scoring_term_id
 
     # for k, v in request.form.items():
     #     entry_dict.append({k: v})

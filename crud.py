@@ -261,7 +261,7 @@ def get_assessment_id_by_name(name):
     return Assessment.query.filter(Assessment.name==name).one()
 
 
-def get_scoring_term_id_by_assessement_id_and_date_taken(assessment_id, date_taken):  
+def get_scoring_term_by_assessement_id_and_date_taken(assessment_id, date_taken):  
     """Query scoring term ID by assessment ID and date taken"""
 
     scoring_term_id = (Scoring_Term.query
@@ -269,6 +269,12 @@ def get_scoring_term_id_by_assessement_id_and_date_taken(assessment_id, date_tak
                         .one())
 
     return scoring_term_id
+
+
+def get_user_by_username(username):
+    """Query user ID by username"""
+
+    return User.query.filter(User.username==username).one()
 
 
 def get_benchmark_by_id(id):
@@ -311,12 +317,6 @@ def get_student_by_id(id):
     """Query student by ID"""
 
     return Student.query.get(id)
-
-
-def get_user_by_id(id):
-    """Query user by ID"""
-
-    return User.query.get(id)
 
 
 def get_assessment_by_name(name):
@@ -362,12 +362,6 @@ def get_student_by_student_id(student_id):
     """Query user by student ID"""
 
     return Student.query.filter_by(student_id=student_id).all()
-
-
-def get_user_by_username(username):
-    """Query user by username"""
-
-    return User.query.filter_by(username=username).first()
 
 
 
