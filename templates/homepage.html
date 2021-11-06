@@ -1,46 +1,59 @@
 {% extends 'base.html' %}
-{% block title %}Data entry page{% endblock %}
+{% block title %}Home: Assessment app{% endblock %}
 
 {% block body %}
-  <h1>Welcome!</h1>
 
+{% if session.get("username") %}
+  <h2>Welcome {{session["username"]}}!</h1>
+  <form action="/logout">
+    <p>
+      <input type="submit" value="Logout">
+    </p>
+  </form>
 
-  <h2>Navigation</h2>
   <form action="/assessment/" method="GET">
     <select name="assessment_name">
-      <!-- <option value="">Select assessment</option> -->
-      <option value="bas">BAS</option>
-      <option value="tc_rr">TC RR</option>
+      <option value="">Select assessment</option>
+      <option value="BAS">BAS</option>
+      <option value="BAS_Spanish">BAS Spanish</option>
+      <option value="TC_RR">TC Running R</option>
+      <option value="TCW">TC Writing</option>
+    </select>
+    <select name="grade">
+      <option value="">Select grade</option>
+      <option value="KN">Kindergarten</option>
+      <option value="1">Grade 1</option>
+      <option value="2">Grade 2</option>
+      <option value="3">Grade 3</option>
+      <option value="4">Grade 4</option>
+      <option value="5">Grade 5</option>
+    </select>
+    <select name="school_id">
+      <option value="">Select school</option>
+      <option value="1">Addison Elementary</option>
+      <option value="2">Juana Briones Elementary</option>
+      <option value="3">Duveneck Elementary</option>
+      <option value="4">District Office</option>
     </select>
     <input type="submit">
   </form>
-  <!-- <ul>
-    <li><a href="/bas">Enter BAS assessment scores</a></li>
-    <li>View assessment scores</a></li>
-  </ul> -->
 
-
+{% else %}
   <h2>Log In</h2>
+  
   <form action="/login" method="POST">
     <p>
       Email <input type="text" name="username">
     </p>
-
     <p>
       Password <input type="password" name="password">
     </p>
-
     <p>
       <input type="submit" name="Login">
     </p>
   </form>
 
-  <!-- <form action="/logout" method="POST">
-    <p>
-      <input type="submit" value="Logout">
-    </p>
-  </form> -->
-
+{% endif %}
 
   <!-- <h2>Create an Account</h2>
   <form action="/users" method="POST">

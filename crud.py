@@ -4,6 +4,8 @@ from model import (db, Academic_Year, Assessment, Benchmark, Exemption, Role,
                     Roster, School, Scoring_Term, Student, Student_Assessment,
                     User, connect_to_db)
 
+from sqlalchemy.orm.exc import NoResultFound
+
 
 def create_academic_year(year, start_date, end_date):
     """Create and return an academic year."""
@@ -17,8 +19,6 @@ def create_academic_year(year, start_date, end_date):
 
     return academic_year
 
-#create_academic_year("2025-2026", "2025-7-1", "2026-6-30")
-
 
 def create_assessment(name, subject):
     """Create and return an assessment."""
@@ -30,8 +30,6 @@ def create_assessment(name, subject):
     db.session.commit()
 
     return assessment
-
-#create_assessment("TCW", "A literacy test in writing")
 
 
 def create_benchmark(assessment_id, grade, term, level, cutoff):
@@ -49,8 +47,6 @@ def create_benchmark(assessment_id, grade, term, level, cutoff):
 
     return benchmark
 
-#create_benchmark(21, 5, "Fall", "", "G")
-
 
 def create_exemption(reason):
     """Create and return an exemption."""
@@ -63,8 +59,6 @@ def create_exemption(reason):
 
     return exemption
 
-#create_exemption("Test Reason")
-
 
 def create_role(name, description):
     """Create and return a role."""
@@ -76,8 +70,6 @@ def create_role(name, description):
     db.session.commit()
 
     return role
-
-#create_role("Queen", "Can delegate everything to others :-)")
 
 
 def create_roster(school_id, student_id, user_id, grade, academic_year_id):
@@ -94,8 +86,6 @@ def create_roster(school_id, student_id, user_id, grade, academic_year_id):
 
     return roster
 
-#create_roster(26, 2700, 280, 5, "2025-2026")
-
 
 def create_school(name, short_name, letter_code):
     """Create and return a benchmark."""
@@ -108,8 +98,6 @@ def create_school(name, short_name, letter_code):
     db.session.commit()
 
     return school
-
-#create_school("Hogwarts Academy", "Hogwarts", "HA")
 
 
 def create_scoring_term(assessment_id, academic_year_id, term, date_open, date_close):
@@ -126,8 +114,6 @@ def create_scoring_term(assessment_id, academic_year_id, term, date_open, date_c
 
     return scoring_term
 
-#create_scoring_term(21, "2025-2026", "Fall", "8/1/2025", "11/30/2026")
-
 
 def create_student(student_id, state_id, first_name, last_name):
     """Create and return a benchmark."""
@@ -141,8 +127,6 @@ def create_student(student_id, state_id, first_name, last_name):
     db.session.commit()
 
     return student
-
-#create_student(1234567, 987654321, "Grace", "Hopper")
 
 
 def create_student_assessment(student_id, scoring_term_id, exemption_id, score, benchmark_id, date_taken):
@@ -161,8 +145,6 @@ def create_student_assessment(student_id, scoring_term_id, exemption_id, score, 
 
     return student_assessment
 
-#create_student_assessment(12, 40, 2, "subA", 3, "9/23/2000")
-
 
 def create_user(staff_id, first_name, last_name, username, password, role_id, active_status):
     """Create and return a new user."""
@@ -179,8 +161,6 @@ def create_user(staff_id, first_name, last_name, username, password, role_id, ac
     db.session.commit()
 
     return user
-
-#create_user(3000, "Linus", "Pauling", "lpauling@fa.ke", "password", 24, True)
 
 
 
@@ -258,23 +238,32 @@ def all_users():
 def get_assessment_id_by_name(name):
     """Query assessment ID by its name"""
 
-    return Assessment.query.filter(Assessment.name==name).one()
+    try:
+        return Assessment.query.filter(Assessment.name==name).one()
+    except NoResultFound:
+        return None
 
 
 def get_scoring_term_by_assessement_id_and_date_taken(assessment_id, date_taken):  
     """Query scoring term ID by assessment ID and date taken"""
 
-    scoring_term_id = (Scoring_Term.query
+    try:
+        scoring_term_id = (Scoring_Term.query
                         .filter(Scoring_Term.assessment_id==assessment_id, Scoring_Term.date_open<=date_taken, Scoring_Term.date_close>=date_taken)
                         .one())
+    except NoResultFound:
+        scoring_term_id = None
 
     return scoring_term_id
 
 
 def get_user_by_username(username):
     """Query user ID by username"""
-
-    return User.query.filter(User.username==username).one()
+    
+    try:
+        return User.query.filter(User.username==username).one()
+    except NoResultFound:
+        return None
 
 
 def get_benchmark_by_id(id):

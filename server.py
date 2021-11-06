@@ -15,12 +15,13 @@ app.jinja_env.undefined = StrictUndefined
 
 @app.route('/')
 def index():
+    
     return render_template('homepage.html')
 
 
 @app.route('/login', methods=['POST'])
 def process_login():
-    """Process user login."""
+    """Process user login"""
 
     username = request.form.get("username")
     password = request.form.get("password")
@@ -29,6 +30,7 @@ def process_login():
     
     if not user or user.password != password:
         flash("The email or password you entered was incorrect.")
+        
     else:
         # Log in user by storing the user's email in session
         session["username"] = username
@@ -37,18 +39,35 @@ def process_login():
     return redirect("/")
 
 
+@app.route("/logout")
+def process_logout():
+    """Log user out"""
+
+    session.pop("username", None)
+    flash("Logged out.")
+    
+    return redirect("/")
+
+
 @app.route('/assessment/')
 def students_by_teacher():
 
-    assessment_name = request.args.get("assessment_name").upper()
+    assessment_name = request.args.get("assessment_name")
+    grade = request.args.get("grade")
+    school_id = request.args.get("school_id")
     print(assessment_name)
 
-    # Temporarily hard code parameters
-    # test_user_id = 49
+    # If no user is logged in, reject request
+    if not session.get("username"):
+        flash("Please log in first.")
+        return redirect("/")
+
     username = session.get("username")
     user_id = crud.get_user_by_username(username).user_id
+
+    # Temporarily hard code parameters
     test_school_id = 2
-    test_grade = "2"
+    test_grade = "1"
     test_academic_year_id = 5
 
     students = crud.get_student_roster_by_teacher(user_id, test_school_id, test_grade, test_academic_year_id)
