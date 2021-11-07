@@ -248,7 +248,7 @@ def get_academic_year_by_date(date_today):
     return academic_year
 
 
-def get_assessment_id_by_name(name):
+def get_assessment_by_name(name):
     """Query assessment ID by its name"""
 
     try:

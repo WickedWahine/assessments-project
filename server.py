@@ -79,17 +79,13 @@ def students_by_teacher():
     assessment_name = request.args.get("assessment_name")
     grade = request.args.get("grade")
     school_id = request.args.get("school_id")
-    print(assessment_name)
 
     username = session.get("username")
     user_id = crud.get_user_by_username(username).user_id
 
-    # Temporarily hard code parameters
-    test_school_id = 2
-    test_grade = "1"
-    test_academic_year_id = 5
+    academic_year_id = crud.get_academic_year_by_date(date.today()).academic_year_id
 
-    students = crud.get_student_roster_by_teacher(user_id, test_school_id, test_grade, test_academic_year_id)
+    students = crud.get_student_roster_by_teacher(user_id, school_id, grade, academic_year_id)
     students = [student.student for student in students]
     students.sort(key=lambda student: student.first_name)
     
@@ -109,8 +105,6 @@ def students_by_teacher():
 
 @app.route('/assessment/<assessment_name>', methods=['POST'])
 def record_entries(assessment_name):
-
-    date_taken = date.today()
     
     teacher = {"first_name": request.form.get('teacher_first'),
                 "last_name": request.form.get('teacher_last'),
@@ -119,10 +113,10 @@ def record_entries(assessment_name):
     assessment_name = assessment_name
 
     # Find Assessment ID for this assessment
-    assessment_id = crud.get_assessment_id_by_name(assessment_name).assessment_id
+    assessment_id = crud.get_assessment_by_name(assessment_name).assessment_id
 
-    # Given Assessment ID and date taken, get Scoring Term ID
-    scoring_term_id = crud.get_scoring_term_by_assessment_id_and_date_taken(assessment_id, date_taken).scoring_term_id
+    # Given Assessment ID and today's date, get Scoring Term ID
+    scoring_term_id = crud.get_scoring_term_by_assessment_id_and_date(assessment_id, date.today()).scoring_term_id
 
     # for k, v in request.form.items():
     #     entry_dict.append({k: v})
@@ -143,24 +137,6 @@ def record_entries(assessment_name):
                             teacher=teacher,
                             assessment_name=assessment_name, 
                             entries=entries)
-
-
-# @app.route('/movies/<movie_id>/rate', methods=['POST'])
-# def rate_movie(movie_id):
-#     score = request.form.get('score')
-#     movie = crud.get_movie_by_id(movie_id)
-#     user = crud.get_user_by_id(session['id'])
-    
-#     if score.isdigit():
-#         score_int = int(score)
-#         if score_int > -1 and score_int < 101:
-#             crud.create_rating(score, movie, user)
-#             flash("Created rating!")
-#         else:
-#             flash("Rating not within valid range!")
-#     else:
-#         flash("Not an integer!")
-#     return redirect('/')
 
 
 if __name__ == "__main__":
