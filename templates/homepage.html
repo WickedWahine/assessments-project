@@ -14,18 +14,33 @@
       <option value="TC_RR">TC Running R</option>
       <option value="TCW">TC Writing</option>
     </select>
+
     <select name="grade">
-      <option value="">Select grade</option>
-      {% for grade in grades %}
-      <option value={{grade}}>{{grade}}</option>
-      {% endfor %}
+      {% if grades|length == 1 %}
+        {% for grade in grades %}
+          <option value={{grade}}>Grade {{grade}}</option>
+        {% endfor %}
+      {% else %}
+        <option value="">Select grade</option>
+        {% for grade in grades %}
+          <option value={{grade}}>Grade {{grade}}</option>
+        {% endfor %}
+      {% endif %}
     </select>
+
     <select name="school_id">
-      <option value="">Select school</option>
-      {% for school in schools %}
-      <option value={{school.school_id}}>{{school.name}}</option>
-      {% endfor %}
+      {% if schools|length == 1 %}
+        {% for school in schools %}
+          <option value={{school.school_id}}>{{school.name}}</option>
+        {% endfor %}
+      {% else %}
+        <option value="">Select school</option>
+        {% for school in schools %}
+          <option value={{school.school_id}}>{{school.name}}</option>
+        {% endfor %}
+      {% endif %}
     </select>
+
     <input type="submit">
   </form>
 
