@@ -235,6 +235,19 @@ def all_users():
 
 ########## Get record by a parameter ##########
 
+def get_academic_year_by_date(date_today):  
+    """Query academic year by today's date"""
+
+    try:
+        academic_year = (Academic_Year.query
+                        .filter(Academic_Year.start_date<=date_today, Academic_Year.end_date>=date_today)
+                        .first())
+    except NoResultFound:
+        academic_year = None
+
+    return academic_year
+
+
 def get_assessment_id_by_name(name):
     """Query assessment ID by its name"""
 
@@ -244,17 +257,17 @@ def get_assessment_id_by_name(name):
         return None
 
 
-def get_scoring_term_by_assessement_id_and_date_taken(assessment_id, date_taken):  
+def get_scoring_term_by_assessment_id_and_date_taken(assessment_id, date_taken):  
     """Query scoring term ID by assessment ID and date taken"""
 
     try:
-        scoring_term_id = (Scoring_Term.query
+        scoring_term = (Scoring_Term.query
                         .filter(Scoring_Term.assessment_id==assessment_id, Scoring_Term.date_open<=date_taken, Scoring_Term.date_close>=date_taken)
                         .one())
     except NoResultFound:
-        scoring_term_id = None
+        scoring_term = None
 
-    return scoring_term_id
+    return scoring_term
 
 
 def get_user_by_username(username):

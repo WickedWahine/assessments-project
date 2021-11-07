@@ -12,10 +12,13 @@ app = Flask(__name__)
 app.secret_key = 'VLF8AsFAy!qbrkdN6Ra$6F#-!UrNBT'
 app.jinja_env.undefined = StrictUndefined
 
+ACADEMIC_YEAR = ""
 
 @app.route('/')
 def index():
-    
+
+    ACADEMIC_YEAR = crud.get_academic_year_by_date(date.today())
+    print(ACADEMIC_YEAR)
     return render_template('homepage.html')
 
 
@@ -34,7 +37,7 @@ def process_login():
     else:
         # Log in user by storing the user's email in session
         session["username"] = username
-        flash(f"Welcome, {user.first_name} {user.last_name}!")
+        flash(f"Login successful!")
 
     return redirect("/")
 
@@ -44,7 +47,7 @@ def process_logout():
     """Log user out"""
 
     session.pop("username", None)
-    flash("Logged out.")
+    flash("Log out successful!")
     
     return redirect("/")
 
@@ -52,15 +55,15 @@ def process_logout():
 @app.route('/assessment/')
 def students_by_teacher():
 
-    assessment_name = request.args.get("assessment_name")
-    grade = request.args.get("grade")
-    school_id = request.args.get("school_id")
-    print(assessment_name)
-
     # If no user is logged in, reject request
     if not session.get("username"):
         flash("Please log in first.")
         return redirect("/")
+
+    assessment_name = request.args.get("assessment_name")
+    grade = request.args.get("grade")
+    school_id = request.args.get("school_id")
+    print(assessment_name)
 
     username = session.get("username")
     user_id = crud.get_user_by_username(username).user_id
@@ -103,7 +106,7 @@ def record_entries(assessment_name):
     assessment_id = crud.get_assessment_id_by_name(assessment_name).assessment_id
 
     # Given Assessment ID and date taken, get Scoring Term ID
-    scoring_term_id = crud.get_scoring_term_by_assessement_id_and_date_taken(assessment_id, date_taken).scoring_term_id
+    scoring_term_id = crud.get_scoring_term_by_assessment_id_and_date_taken(assessment_id, date_taken).scoring_term_id
 
     # for k, v in request.form.items():
     #     entry_dict.append({k: v})
