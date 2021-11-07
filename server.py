@@ -22,12 +22,12 @@ def index():
         schools_grades = crud.get_schools_grades_for_teacher(user_id, academic_year.academic_year_id)
         #print(pprint(schools_grades))
         schools = [school.school for school in schools_grades]
-        schools = set(schools.sort())
-        print(pprint(schools))
+        schools = list(set(schools))
+        schools.sort(key=lambda school: school.name)
         print(schools)
         # grades = [grade for grade in schools_grades]
         # grades.sort(key=lambda grade: grades.grade)
-        
+        return render_template('homepage.html', schools=schools)
 
     return render_template('homepage.html')
 

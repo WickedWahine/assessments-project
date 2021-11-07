@@ -25,10 +25,9 @@
     </select>
     <select name="school_id">
       <option value="">Select school</option>
-      <option value="1">Addison Elementary</option>
-      <option value="2">Juana Briones Elementary</option>
-      <option value="3">Duveneck Elementary</option>
-      <option value="4">District Office</option>
+      {% for school in schools %}
+      <option value={{school.school_id}}>{{school.name}}</option>
+      {% endfor %}
     </select>
     <input type="submit">
   </form>
