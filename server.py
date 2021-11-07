@@ -16,18 +16,24 @@ app.jinja_env.undefined = StrictUndefined
 @app.route('/')
 def index():
     
+    # If there's a user logged in, show choices for next step
     if session.get("username"):
         user_id = crud.get_user_by_username(session["username"]).user_id
+        # Use today's date to determine academic year
         academic_year = crud.get_academic_year_by_date(date.today())
+        # Using logged in user info + academic year to get a list of
+        # schools and grades that this user teaches
         schools_grades = crud.get_schools_grades_for_teacher(user_id, academic_year.academic_year_id)
-        #print(pprint(schools_grades))
+        
         schools = [school.school for school in schools_grades]
         schools = list(set(schools))
         schools.sort(key=lambda school: school.name)
-        print(schools)
-        # grades = [grade for grade in schools_grades]
-        # grades.sort(key=lambda grade: grades.grade)
-        return render_template('homepage.html', schools=schools)
+        
+        grades = [school.grade for school in schools_grades]
+        grades = list(set(grades))
+        grades.sort()
+
+        return render_template('homepage.html', schools=schools, grades=grades)
 
     return render_template('homepage.html')
 

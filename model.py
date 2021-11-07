@@ -115,7 +115,7 @@ class Roster(db.Model):
     user = db.relationship("User", backref="rosters")
 
     def __repr__(self):
-        return f'<Roster student_id={self.student_id} user_id={self.user_id}>'
+        return f'<Roster student_id={self.student_id} user_id={self.user_id} grade={self.grade}>'
 
 
 class School(db.Model):
