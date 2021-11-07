@@ -279,18 +279,6 @@ def get_user_by_username(username):
         return None
 
 
-def get_benchmark_by_id(id):
-    """Query benchmark by ID"""
-
-    return Benchmark.query.get(id)
-
-
-def get_role_by_id(id):
-    """Query role by ID"""
-
-    return Role.query.get(id)
-
-
 def get_student_roster_by_teacher(user_id, school_id, grade, academic_year_id):
     """ Query to list students by teacher, school, grade, academic year.
         Since roster is what ties then tgt, we use the object Roster.
@@ -302,6 +290,18 @@ def get_student_roster_by_teacher(user_id, school_id, grade, academic_year_id):
 
     return student_roster
 
+
+def get_schools_grades_for_teacher(user_id, academic_year_id):
+    """ Query to list schools and grades for a teacher during a given academic year.
+        Since roster is what ties then tgt, we use the object Roster.
+    """
+
+    schools_grades = (Roster.query
+                    .filter_by(user_id=user_id, academic_year_id=academic_year_id)
+                    .distinct())
+
+    return schools_grades
+    
 
 def get_school_by_id(id):
     """Query school by ID"""
@@ -325,6 +325,18 @@ def get_assessment_by_name(name):
     """Query user by name"""
 
     return Assessment.query.filter_by(name=name).first()
+
+
+def get_benchmark_by_id(id):
+    """Query benchmark by ID"""
+
+    return Benchmark.query.get(id)
+
+
+def get_role_by_id(id):
+    """Query role by ID"""
+
+    return Role.query.get(id)
 
 
 

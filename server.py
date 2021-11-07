@@ -12,13 +12,23 @@ app = Flask(__name__)
 app.secret_key = 'VLF8AsFAy!qbrkdN6Ra$6F#-!UrNBT'
 app.jinja_env.undefined = StrictUndefined
 
-ACADEMIC_YEAR = ""
 
 @app.route('/')
 def index():
+    
+    if session.get("username"):
+        user_id = crud.get_user_by_username(session["username"]).user_id
+        academic_year = crud.get_academic_year_by_date(date.today())
+        schools_grades = crud.get_schools_grades_for_teacher(user_id, academic_year.academic_year_id)
+        #print(pprint(schools_grades))
+        schools = [school.school for school in schools_grades]
+        schools = set(schools.sort())
+        print(pprint(schools))
+        print(schools)
+        # grades = [grade for grade in schools_grades]
+        # grades.sort(key=lambda grade: grades.grade)
+        
 
-    ACADEMIC_YEAR = crud.get_academic_year_by_date(date.today())
-    print(ACADEMIC_YEAR)
     return render_template('homepage.html')
 
 

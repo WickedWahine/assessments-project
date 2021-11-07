@@ -8,6 +8,7 @@
 <h3>Your email is {{teacher.username}}</h3>
 <h4>Today is {{today}}</h4>
 
+  {% if students %}
   <form action="/assessment/{{assessment_name}}" method="POST">
     <table>
       <thead>
@@ -38,6 +39,11 @@
     <input type="hidden" name="teacher_first" value="{{teacher.first_name}}">
     <input type="hidden" name="teacher_last" value="{{teacher.last_name}}">
     <input type="hidden" name="teacher_username" value="{{teacher.username}}">
-</form>
+  </form>
+  {% else %}
+  <p>
+    You do not have any students the selected grade and school this term. If you have any questions please contact "The One."
+  </p>
+  {% endif %}
 
 {% endblock %}
