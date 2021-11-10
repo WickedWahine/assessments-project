@@ -19,11 +19,17 @@ def index():
     # If there's a user logged in, show choices for next step
     if session.get("username"):
         user_id = crud.get_user_by_username(session["username"]).user_id
+
         # Use today's date to determine academic year
         academic_year = crud.get_academic_year_by_date(date.today())
+
         # Using logged in user info + academic year to get a list of
         # schools and grades that this user teaches
         schools_grades = crud.get_schools_grades_for_teacher(user_id, academic_year.academic_year_id)
+
+        # Get assessments to display
+        assessments = crud.all_assessments()
+        assessments = [assessment for assessment in assessments]
         
         schools = [school.school for school in schools_grades]
         schools = list(set(schools))
@@ -33,7 +39,7 @@ def index():
         grades = list(set(grades))
         grades.sort()
 
-        return render_template('homepage.html', schools=schools, grades=grades)
+        return render_template('homepage.html', assessments=assessments, schools=schools, grades=grades)
 
     return render_template('homepage.html')
 
@@ -76,44 +82,42 @@ def students_by_teacher():
         flash("Please log in first.")
         return redirect("/")
 
-    assessment_name = request.args.get("assessment_name")
+    assessment_id = request.args.get("assessment_id")
+    assessment = crud.get_assessment_by_id(assessment_id)
+
     grade = request.args.get("grade")
     school_id = request.args.get("school_id")
 
     username = session.get("username")
-    user_id = crud.get_user_by_username(username).user_id
+    user = crud.get_user_by_username(username)
 
-    academic_year_id = crud.get_academic_year_by_date(date.today()).academic_year_id
+    academic_year = crud.get_academic_year_by_date(date.today())
 
-    students = crud.get_student_roster_by_teacher(user_id, school_id, grade, academic_year_id)
+    students = crud.get_student_roster_by_teacher(user.user_id, school_id, grade, academic_year.academic_year_id)
     students = [student.student for student in students]
     students.sort(key=lambda student: student.first_name)
     
     student_ass = [student.student_assessments for student in students]
     rosters = [student.rosters for student in students]
-    teacher = crud.get_user_by_username(username)
     today = date.today().strftime("%m/%d/%y")
 
     return render_template(f"/assessment.html", 
-                            assessment_name=assessment_name, 
+                            assessment=assessment, 
                             students=students, 
                             rosters=rosters, 
-                            teacher=teacher, 
+                            user=user, 
                             student_ass=student_ass, 
                             today=today)
 
 
-@app.route('/assessment/<assessment_name>', methods=['POST'])
-def record_entries(assessment_name):
+@app.route('/assessment/<assessment_id>', methods=['POST'])
+def record_entries(assessment_id):
     
-    teacher = {"first_name": request.form.get('teacher_first'),
-                "last_name": request.form.get('teacher_last'),
-                "username": request.form.get('teacher_username')}
+    username = request.form.get('username')
+    user = crud.get_user_by_username(username)
 
-    assessment_name = assessment_name
-
-    # Find Assessment ID for this assessment
-    assessment_id = crud.get_assessment_by_name(assessment_name).assessment_id
+    # Get assessment by its ID
+    assessment = crud.get_assessment_by_id(assessment_id)
 
     # Given Assessment ID and today's date, get Scoring Term ID
     scoring_term_id = crud.get_scoring_term_by_assessment_id_and_date(assessment_id, date.today()).scoring_term_id
@@ -130,12 +134,11 @@ def record_entries(assessment_name):
         entries.append({'student_id': sid, 'score': scores[i], 'exemption_id': exemption_ids[i]})
     
     print(pprint(entries))
-    print(f"assessment {assessment_name}")
-    print(f"teacher {teacher}")
+    print(f"assessment {assessment.name}")
     
     return render_template('report.html', 
-                            teacher=teacher,
-                            assessment_name=assessment_name, 
+                            user=user,
+                            assessment=assessment, 
                             entries=entries)
 
 

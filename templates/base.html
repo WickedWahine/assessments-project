@@ -4,18 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <title>
-      {% block title %}{% endblock %}
-    </title>
+    <title>{% block title %}{% endblock %}</title>
 
     {% block head %}{% endblock %}
   </head>
   <body>
     <p><a href="/">Home</a></p>
     {% for msg in get_flashed_messages() %}
-    <p class="flash-msg">
-      {{ msg }}
-    </p>
+    <p class="flash-msg">{{ msg }}</p>
     {% endfor %}
 
     {% block body %}{% endblock %}

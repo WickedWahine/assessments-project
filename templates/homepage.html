@@ -6,17 +6,14 @@
     <h2>Welcome {{session["username"]}}!</h1>
 
     {% if not grades or not schools %}
-      <p>
-        You do not have any students the selected grade and school this term. If you have any questions please contact "The One."
-      </p>
+      <p>You do not have any students in the selected grade and school this term. If you have any questions please contact "The One."</p>
     {% else %}
       <form action="/assessment/" method="GET">
-        <select name="assessment_name" required>
+        <select name="assessment_id" required>
           <option value="">Select assessment</option>
-          <option value="BAS">BAS</option>
-          <option value="BAS_Spanish">BAS Spanish</option>
-          <option value="TC_RR">TC Running R</option>
-          <option value="TCW">TC Writing</option>
+          {% for assessment in assessments %}
+          <option value="{{assessment.assessment_id}}">{{assessment.name}}</option>
+          {% endfor %}
         </select>
 
         <select name="grade" required>
@@ -49,24 +46,16 @@
       </form>
     {% endif %}
     <form action="/logout">
-      <p>
-        <input type="submit" value="Logout">
-      </p>
+      <p><input type="submit" value="Logout"></p>
     </form>
 
   {% else %}
     <h2>Log In</h2>
     
     <form action="/login" method="POST">
-      <p>
-        Email <input type="text" name="username">
-      </p>
-      <p>
-        Password <input type="password" name="password">
-      </p>
-      <p>
-        <input type="submit" name="Login">
-      </p>
+      <p>Email <input type="text" name="username"></p>
+      <p>Password <input type="password" name="password"></p>
+      <p><input type="submit" name="Login"></p>
     </form>
 
   {% endif %}

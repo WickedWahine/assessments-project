@@ -257,7 +257,7 @@ def get_assessment_by_name(name):
         return None
 
 
-def get_scoring_term_by_assessment_id_and_date_taken(assessment_id, date_taken):  
+def get_scoring_term_by_assessment_id_and_date(assessment_id, date_taken):  
     """Query scoring term ID by assessment ID and date taken"""
 
     try:
@@ -303,6 +303,20 @@ def get_schools_grades_for_teacher(user_id, academic_year_id):
     return schools_grades
     
 
+def get_assessment_by_id(id):
+    """Query user by name"""
+
+    return Assessment.query.filter_by(assessment_id=id).first()
+
+
+def get_assessment_by_name(name):
+    """Query user by name"""
+
+    return Assessment.query.filter_by(name=name).first()
+
+
+
+
 def get_school_by_id(id):
     """Query school by ID"""
 
@@ -319,12 +333,6 @@ def get_student_by_id(id):
     """Query student by ID"""
 
     return Student.query.get(id)
-
-
-def get_assessment_by_name(name):
-    """Query user by name"""
-
-    return Assessment.query.filter_by(name=name).first()
 
 
 def get_benchmark_by_id(id):
@@ -346,12 +354,6 @@ def get_academic_year_by_year(year):
     """Query academic year by year"""
 
     return Academic_Year.query.filter_by(year=year).first()
-
-
-def get_assessment_by_name(name):
-    """Query assessment by name"""
-
-    return Assessment.query.filter_by(name=name).first()
 
 
 def get_role_by_name(name):
