@@ -2,10 +2,11 @@
 {% block title %}Entering scores for {{assessment.name}} assessment{% endblock %}
 
 {% block body %}
-  <h1>Assessment name: {{assessment.name}}</h1>
+  <h1>Assessment: {{assessment.name}}</h1>
   <h2>Hello {{user.first_name}} {{user.last_name}}</h2>
   <h3>Your email is {{user.username}}</h3>
   <h4>Today is {{today}}</h4>
+  <h4>The students are grade {{grade}}</h4>
 
   {% if students %}
     <form action="/assessment/{{assessment.assessment_id}}" method="POST">
@@ -21,8 +22,11 @@
         <tbody>
           {% for student in students %}
             <tr>
-              <td>{{student.first_name}} {{student.last_name}}</td>
-              <td>{{student.student_id}}<input type="hidden" name="student_id" value="{{student.student_id}}"></td>
+              <td>{{student.first_name}} {{student.last_name}}
+                <td>{{student.student_id}}
+                  <input type="hidden" name="student_id" value="{{student.student_id}}"></td>
+                <input type="hidden" name="first_name" value="{{student.first_name}}">
+                <input type="hidden" name="last_name" value="{{student.last_name}}"></td>
               <td><input type="text" name="score"></td>
               <td><select name="exemption_id">
                 <option value="">Select exemption, if applicable</option>
@@ -35,6 +39,7 @@
       </table>
       <input type="submit" value="Save">
       <input type="hidden" name="username" value="{{user.username}}">
+      <input type="hidden" name="grade" value="{{grade}}">
     </form>
   {% else %}
     <p>You do not have any students the selected grade and school this term. If you have any questions please contact "The One."</p>

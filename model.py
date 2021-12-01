@@ -55,12 +55,12 @@ class Benchmark(db.Model):
     grade = db.Column(db.String, nullable=False)
     term = db.Column(db.String, nullable=False)
     level = db.Column(db.String)
-    cutoff = db.Column(db.Integer)
+    cutoff = db.Column(db.String)
 
     assessment = db.relationship("Assessment", backref="benchmark")
 
     def __repr__(self):
-        return f'<Benchmark grade_id={self.grade_id} level={self.term_id} cutoffe={self.score}>'
+        return f'<Benchmark grade={self.grade} term={self.term} level={self.level} cutoff={self.cutoff}>'
 
 
 class Exemption(db.Model):
@@ -156,7 +156,7 @@ class Scoring_Term(db.Model):
     academic_year = db.relationship("Academic_Year", backref="scoring_terms")
 
     def __repr__(self):
-        return f'<Scoring_Term term={self.term} date_open={self.date_open}>'
+        return f'<Scoring_Term scoring_term_id={self.scoring_term_id} term={self.term} date_open={self.date_open}>'
 
 
 class Student(db.Model):

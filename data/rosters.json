@@ -10,7 +10,7 @@
         "school_id": "1",
         "student_id": "4949655",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -73,7 +73,7 @@
         "school_id": "3",
         "student_id": "4949315",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -87,7 +87,7 @@
         "school_id": "3",
         "student_id": "4950142",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -129,14 +129,14 @@
         "school_id": "1",
         "student_id": "4948282",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "2",
         "student_id": "4950643",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -199,7 +199,7 @@
         "school_id": "2",
         "student_id": "4951160",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -213,7 +213,7 @@
         "school_id": "1",
         "student_id": "4949318",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -234,7 +234,7 @@
         "school_id": "2",
         "student_id": "4949396",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -255,7 +255,7 @@
         "school_id": "1",
         "student_id": "4950968",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -276,7 +276,7 @@
         "school_id": "2",
         "student_id": "4949336",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -325,7 +325,7 @@
         "school_id": "2",
         "student_id": "4950761",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -374,7 +374,7 @@
         "school_id": "3",
         "student_id": "4949365",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -437,14 +437,14 @@
         "school_id": "3",
         "student_id": "4949520",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4949344",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -486,7 +486,7 @@
         "school_id": "2",
         "student_id": "4949489",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -542,7 +542,7 @@
         "school_id": "2",
         "student_id": "4949416",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -591,7 +591,7 @@
         "school_id": "3",
         "student_id": "4955279",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -710,7 +710,7 @@
         "school_id": "1",
         "student_id": "4948282",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -773,7 +773,7 @@
         "school_id": "1",
         "student_id": "4949479",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -808,7 +808,7 @@
         "school_id": "2",
         "student_id": "4949497",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -850,7 +850,7 @@
         "school_id": "1",
         "student_id": "4950876",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -864,7 +864,7 @@
         "school_id": "2",
         "student_id": "4950886",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -892,7 +892,7 @@
         "school_id": "3",
         "student_id": "4951387",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -997,7 +997,7 @@
         "school_id": "1",
         "student_id": "4949941",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -1053,7 +1053,7 @@
         "school_id": "1",
         "student_id": "4949537",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -1312,7 +1312,7 @@
         "school_id": "2",
         "student_id": "4949256",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -1452,7 +1452,7 @@
         "school_id": "1",
         "student_id": "4949328",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -1613,7 +1613,7 @@
         "school_id": "3",
         "student_id": "4949494",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -1697,7 +1697,7 @@
         "school_id": "1",
         "student_id": "4949341",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -1725,7 +1725,7 @@
         "school_id": "1",
         "student_id": "4949328",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -1739,14 +1739,14 @@
         "school_id": "2",
         "student_id": "4949363",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "2",
         "student_id": "4951160",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -1788,7 +1788,7 @@
         "school_id": "3",
         "student_id": "4949668",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -1802,7 +1802,7 @@
         "school_id": "3",
         "student_id": "4949498",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -1900,7 +1900,7 @@
         "school_id": "1",
         "student_id": "4949596",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -1991,7 +1991,7 @@
         "school_id": "3",
         "student_id": "4948603",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -2061,7 +2061,7 @@
         "school_id": "2",
         "student_id": "4949416",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -2082,7 +2082,7 @@
         "school_id": "1",
         "student_id": "4949941",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -2124,7 +2124,7 @@
         "school_id": "1",
         "student_id": "4949470",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -2215,7 +2215,7 @@
         "school_id": "2",
         "student_id": "4949515",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -2341,14 +2341,14 @@
         "school_id": "3",
         "student_id": "4948985",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "3",
         "student_id": "4949542",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -2621,7 +2621,7 @@
         "school_id": "1",
         "student_id": "4949522",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -2656,7 +2656,7 @@
         "school_id": "1",
         "student_id": "4949546",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -2796,7 +2796,7 @@
         "school_id": "2",
         "student_id": "4949529",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -2873,7 +2873,7 @@
         "school_id": "2",
         "student_id": "4949489",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -2908,7 +2908,7 @@
         "school_id": "1",
         "student_id": "4949575",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -2929,7 +2929,7 @@
         "school_id": "3",
         "student_id": "4949498",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -2943,7 +2943,7 @@
         "school_id": "1",
         "student_id": "4950876",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -2971,7 +2971,7 @@
         "school_id": "2",
         "student_id": "4948399",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3153,7 +3153,7 @@
         "school_id": "1",
         "student_id": "4948282",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3174,7 +3174,7 @@
         "school_id": "3",
         "student_id": "4951381",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3230,7 +3230,7 @@
         "school_id": "2",
         "student_id": "4949669",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3328,7 +3328,7 @@
         "school_id": "1",
         "student_id": "4948448",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3356,7 +3356,7 @@
         "school_id": "2",
         "student_id": "4949488",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3447,7 +3447,7 @@
         "school_id": "2",
         "student_id": "4949398",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3475,7 +3475,7 @@
         "school_id": "1",
         "student_id": "4949938",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3538,7 +3538,7 @@
         "school_id": "3",
         "student_id": "4949428",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3559,7 +3559,7 @@
         "school_id": "1",
         "student_id": "4949458",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3608,7 +3608,7 @@
         "school_id": "1",
         "student_id": "4950968",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3762,7 +3762,7 @@
         "school_id": "2",
         "student_id": "4949539",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3790,7 +3790,7 @@
         "school_id": "3",
         "student_id": "4949408",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3860,21 +3860,21 @@
         "school_id": "3",
         "student_id": "4949360",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4949348",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4949421",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -3986,7 +3986,7 @@
         "school_id": "1",
         "student_id": "4949938",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4056,7 +4056,7 @@
         "school_id": "3",
         "student_id": "4949252",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4196,7 +4196,7 @@
         "school_id": "2",
         "student_id": "4950761",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4252,7 +4252,7 @@
         "school_id": "3",
         "student_id": "4949354",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4350,7 +4350,7 @@
         "school_id": "2",
         "student_id": "4949333",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4364,7 +4364,7 @@
         "school_id": "1",
         "student_id": "4950663",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4399,7 +4399,7 @@
         "school_id": "3",
         "student_id": "4949526",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4434,7 +4434,7 @@
         "school_id": "2",
         "student_id": "4951160",
         "user_id": "13",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4448,14 +4448,14 @@
         "school_id": "1",
         "student_id": "4949534",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "3",
         "student_id": "4949423",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4469,7 +4469,7 @@
         "school_id": "1",
         "student_id": "4950297",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4651,7 +4651,7 @@
         "school_id": "1",
         "student_id": "4949470",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4693,7 +4693,7 @@
         "school_id": "1",
         "student_id": "4950819",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4742,7 +4742,7 @@
         "school_id": "1",
         "student_id": "4948434",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4763,14 +4763,14 @@
         "school_id": "3",
         "student_id": "4950534",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "3",
         "student_id": "4949408",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -4994,7 +4994,7 @@
         "school_id": "2",
         "student_id": "4949333",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5015,21 +5015,21 @@
         "school_id": "3",
         "student_id": "4951379",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "2",
         "student_id": "4949539",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "3",
         "student_id": "4949542",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5078,7 +5078,7 @@
         "school_id": "2",
         "student_id": "4949415",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5176,7 +5176,7 @@
         "school_id": "1",
         "student_id": "4948448",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5190,7 +5190,7 @@
         "school_id": "3",
         "student_id": "4949417",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5288,7 +5288,7 @@
         "school_id": "1",
         "student_id": "4950810",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5330,7 +5330,7 @@
         "school_id": "1",
         "student_id": "4949458",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5442,7 +5442,7 @@
         "school_id": "2",
         "student_id": "4949497",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5491,7 +5491,7 @@
         "school_id": "2",
         "student_id": "4950882",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5533,7 +5533,7 @@
         "school_id": "1",
         "student_id": "4949443",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5666,7 +5666,7 @@
         "school_id": "1",
         "student_id": "4948713",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5701,7 +5701,7 @@
         "school_id": "1",
         "student_id": "4951006",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5715,7 +5715,7 @@
         "school_id": "3",
         "student_id": "4949526",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5792,7 +5792,7 @@
         "school_id": "1",
         "student_id": "4948498",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5834,7 +5834,7 @@
         "school_id": "3",
         "student_id": "4950905",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -5981,7 +5981,7 @@
         "school_id": "2",
         "student_id": "4950761",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6058,7 +6058,7 @@
         "school_id": "1",
         "student_id": "4949368",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6072,14 +6072,14 @@
         "school_id": "1",
         "student_id": "4949875",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4948327",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6107,7 +6107,7 @@
         "school_id": "3",
         "student_id": "4950142",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6135,7 +6135,7 @@
         "school_id": "1",
         "student_id": "4949409",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6156,7 +6156,7 @@
         "school_id": "2",
         "student_id": "4949336",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6338,7 +6338,7 @@
         "school_id": "1",
         "student_id": "4949473",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6380,7 +6380,7 @@
         "school_id": "2",
         "student_id": "4949504",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6436,7 +6436,7 @@
         "school_id": "1",
         "student_id": "4949410",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6485,7 +6485,7 @@
         "school_id": "2",
         "student_id": "4949377",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6520,7 +6520,7 @@
         "school_id": "1",
         "student_id": "4949506",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6541,7 +6541,7 @@
         "school_id": "3",
         "student_id": "4949746",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6576,7 +6576,7 @@
         "school_id": "2",
         "student_id": "4949363",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6758,7 +6758,7 @@
         "school_id": "1",
         "student_id": "4948918",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6772,7 +6772,7 @@
         "school_id": "2",
         "student_id": "4949444",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6807,7 +6807,7 @@
         "school_id": "1",
         "student_id": "4949654",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6842,7 +6842,7 @@
         "school_id": "2",
         "student_id": "4950643",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -6940,7 +6940,7 @@
         "school_id": "1",
         "student_id": "4949506",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7073,14 +7073,14 @@
         "school_id": "1",
         "student_id": "4949318",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4948713",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7108,14 +7108,14 @@
         "school_id": "3",
         "student_id": "4949514",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4949941",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7150,7 +7150,7 @@
         "school_id": "1",
         "student_id": "4950810",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7255,14 +7255,14 @@
         "school_id": "3",
         "student_id": "4949417",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "3",
         "student_id": "4949360",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7297,7 +7297,7 @@
         "school_id": "1",
         "student_id": "4949875",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7402,7 +7402,7 @@
         "school_id": "3",
         "student_id": "4949936",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7430,14 +7430,14 @@
         "school_id": "2",
         "student_id": "4949332",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4949458",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7465,7 +7465,7 @@
         "school_id": "1",
         "student_id": "4950680",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7514,7 +7514,7 @@
         "school_id": "2",
         "student_id": "4951160",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7675,7 +7675,7 @@
         "school_id": "2",
         "student_id": "4949377",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7752,7 +7752,7 @@
         "school_id": "2",
         "student_id": "4949358",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7836,7 +7836,7 @@
         "school_id": "3",
         "student_id": "4949365",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7878,7 +7878,7 @@
         "school_id": "1",
         "student_id": "4950680",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -7899,7 +7899,7 @@
         "school_id": "1",
         "student_id": "4950819",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8018,7 +8018,7 @@
         "school_id": "2",
         "student_id": "4949486",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8053,7 +8053,7 @@
         "school_id": "3",
         "student_id": "4949423",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8116,7 +8116,7 @@
         "school_id": "3",
         "student_id": "4949315",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8179,7 +8179,7 @@
         "school_id": "1",
         "student_id": "4948918",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8361,7 +8361,7 @@
         "school_id": "1",
         "student_id": "4949655",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8417,7 +8417,7 @@
         "school_id": "1",
         "student_id": "4949506",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8466,7 +8466,7 @@
         "school_id": "3",
         "student_id": "4951387",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8494,7 +8494,7 @@
         "school_id": "3",
         "student_id": "4949830",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8508,7 +8508,7 @@
         "school_id": "3",
         "student_id": "4951381",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8641,7 +8641,7 @@
         "school_id": "1",
         "student_id": "4949341",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8662,7 +8662,7 @@
         "school_id": "1",
         "student_id": "4951006",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8704,14 +8704,14 @@
         "school_id": "2",
         "student_id": "4949529",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "2",
         "student_id": "4949416",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8774,7 +8774,7 @@
         "school_id": "3",
         "student_id": "4949428",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8858,7 +8858,7 @@
         "school_id": "1",
         "student_id": "4949596",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8872,7 +8872,7 @@
         "school_id": "2",
         "student_id": "4949482",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8921,7 +8921,7 @@
         "school_id": "1",
         "student_id": "4950819",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8956,7 +8956,7 @@
         "school_id": "2",
         "student_id": "4949669",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -8970,7 +8970,7 @@
         "school_id": "1",
         "student_id": "4948327",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9026,7 +9026,7 @@
         "school_id": "1",
         "student_id": "4949522",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9096,7 +9096,7 @@
         "school_id": "3",
         "student_id": "4949494",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9110,7 +9110,7 @@
         "school_id": "3",
         "student_id": "4949746",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9152,14 +9152,14 @@
         "school_id": "2",
         "student_id": "4949547",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "2",
         "student_id": "4949425",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9257,7 +9257,7 @@
         "school_id": "1",
         "student_id": "4949938",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9320,7 +9320,7 @@
         "school_id": "1",
         "student_id": "4950810",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9495,7 +9495,7 @@
         "school_id": "2",
         "student_id": "4949488",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9607,7 +9607,7 @@
         "school_id": "1",
         "student_id": "4949440",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9691,7 +9691,7 @@
         "school_id": "3",
         "student_id": "4949508",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9705,7 +9705,7 @@
         "school_id": "1",
         "student_id": "4949440",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9726,7 +9726,7 @@
         "school_id": "1",
         "student_id": "4949606",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9754,7 +9754,7 @@
         "school_id": "3",
         "student_id": "4949354",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9768,7 +9768,7 @@
         "school_id": "2",
         "student_id": "4949358",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9796,14 +9796,14 @@
         "school_id": "2",
         "student_id": "4950882",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "2",
         "student_id": "4949347",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9880,7 +9880,7 @@
         "school_id": "3",
         "student_id": "4949560",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -9929,7 +9929,7 @@
         "school_id": "1",
         "student_id": "4949537",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10013,7 +10013,7 @@
         "school_id": "2",
         "student_id": "4949486",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10034,7 +10034,7 @@
         "school_id": "2",
         "student_id": "4949547",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10132,7 +10132,7 @@
         "school_id": "1",
         "student_id": "4948499",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10216,7 +10216,7 @@
         "school_id": "2",
         "student_id": "4948399",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10293,7 +10293,7 @@
         "school_id": "3",
         "student_id": "4949812",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10335,7 +10335,7 @@
         "school_id": "1",
         "student_id": "4948499",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10468,7 +10468,7 @@
         "school_id": "1",
         "student_id": "4949356",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10566,7 +10566,7 @@
         "school_id": "3",
         "student_id": "4949508",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10587,7 +10587,7 @@
         "school_id": "2",
         "student_id": "4949396",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10699,7 +10699,7 @@
         "school_id": "1",
         "student_id": "4948499",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10727,7 +10727,7 @@
         "school_id": "3",
         "student_id": "4948369",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10748,7 +10748,7 @@
         "school_id": "1",
         "student_id": "4948327",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10762,7 +10762,7 @@
         "school_id": "1",
         "student_id": "4950876",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10811,21 +10811,21 @@
         "school_id": "3",
         "student_id": "4949830",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "2",
         "student_id": "4949415",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "3",
         "student_id": "4949520",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10860,7 +10860,7 @@
         "school_id": "1",
         "student_id": "4952502",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -10958,7 +10958,7 @@
         "school_id": "2",
         "student_id": "4949425",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11000,7 +11000,7 @@
         "school_id": "3",
         "student_id": "4951383",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11014,7 +11014,7 @@
         "school_id": "1",
         "student_id": "4949606",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11049,7 +11049,7 @@
         "school_id": "1",
         "student_id": "4950968",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11182,7 +11182,7 @@
         "school_id": "3",
         "student_id": "4949812",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11231,7 +11231,7 @@
         "school_id": "1",
         "student_id": "4948845",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11392,7 +11392,7 @@
         "school_id": "3",
         "student_id": "4951159",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11483,7 +11483,7 @@
         "school_id": "1",
         "student_id": "4952502",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11532,7 +11532,7 @@
         "school_id": "1",
         "student_id": "4950663",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11560,7 +11560,7 @@
         "school_id": "2",
         "student_id": "4949332",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11588,7 +11588,7 @@
         "school_id": "3",
         "student_id": "4948603",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11651,7 +11651,7 @@
         "school_id": "1",
         "student_id": "4948917",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11700,7 +11700,7 @@
         "school_id": "2",
         "student_id": "4948399",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11721,7 +11721,7 @@
         "school_id": "1",
         "student_id": "4949348",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11833,7 +11833,7 @@
         "school_id": "2",
         "student_id": "4950302",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11910,7 +11910,7 @@
         "school_id": "3",
         "student_id": "4951379",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11938,7 +11938,7 @@
         "school_id": "1",
         "student_id": "4950297",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -11980,14 +11980,14 @@
         "school_id": "2",
         "student_id": "4949444",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "3",
         "student_id": "4950534",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -12036,7 +12036,7 @@
         "school_id": "2",
         "student_id": "4949504",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -12064,7 +12064,7 @@
         "school_id": "2",
         "student_id": "4949548",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -12099,7 +12099,7 @@
         "school_id": "3",
         "student_id": "4951382",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -12162,7 +12162,7 @@
         "school_id": "2",
         "student_id": "4949482",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -12204,7 +12204,7 @@
         "school_id": "1",
         "student_id": "4949470",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -12498,7 +12498,7 @@
         "school_id": "1",
         "student_id": "4949421",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -12512,14 +12512,14 @@
         "school_id": "2",
         "student_id": "4949358",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "3",
         "student_id": "4948369",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -12596,7 +12596,7 @@
         "school_id": "2",
         "student_id": "4949482",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -12834,7 +12834,7 @@
         "school_id": "2",
         "student_id": "4949256",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -12848,28 +12848,28 @@
         "school_id": "2",
         "student_id": "4948910",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4952502",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4948918",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4948845",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -12925,7 +12925,7 @@
         "school_id": "1",
         "student_id": "4948917",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13002,7 +13002,7 @@
         "school_id": "1",
         "student_id": "4949875",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13058,7 +13058,7 @@
         "school_id": "2",
         "student_id": "4949504",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13079,7 +13079,7 @@
         "school_id": "1",
         "student_id": "4949575",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13282,7 +13282,7 @@
         "school_id": "1",
         "student_id": "4949356",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13457,7 +13457,7 @@
         "school_id": "2",
         "student_id": "4949398",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13527,7 +13527,7 @@
         "school_id": "3",
         "student_id": "4949560",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13548,14 +13548,14 @@
         "school_id": "3",
         "student_id": "4949668",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4952502",
         "user_id": "25",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13660,7 +13660,7 @@
         "school_id": "3",
         "student_id": "4949514",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13695,7 +13695,7 @@
         "school_id": "1",
         "student_id": "4949368",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13779,7 +13779,7 @@
         "school_id": "3",
         "student_id": "4949252",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13807,14 +13807,14 @@
         "school_id": "2",
         "student_id": "4950882",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "2",
         "student_id": "4949347",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13828,7 +13828,7 @@
         "school_id": "1",
         "student_id": "4949443",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13870,7 +13870,7 @@
         "school_id": "2",
         "student_id": "4949497",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13884,7 +13884,7 @@
         "school_id": "1",
         "student_id": "4949410",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13905,7 +13905,7 @@
         "school_id": "1",
         "student_id": "4949654",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13954,14 +13954,14 @@
         "school_id": "3",
         "student_id": "4950905",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "2",
         "student_id": "4949547",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -13975,7 +13975,7 @@
         "school_id": "2",
         "student_id": "4949486",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -14003,7 +14003,7 @@
         "school_id": "1",
         "student_id": "4950297",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -14213,7 +14213,7 @@
         "school_id": "1",
         "student_id": "4949356",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -14248,14 +14248,14 @@
         "school_id": "1",
         "student_id": "4949534",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "3",
         "student_id": "4949324",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -14283,7 +14283,7 @@
         "school_id": "1",
         "student_id": "4948917",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -14451,7 +14451,7 @@
         "school_id": "3",
         "student_id": "4951159",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -14479,7 +14479,7 @@
         "school_id": "2",
         "student_id": "4949515",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -14542,7 +14542,7 @@
         "school_id": "1",
         "student_id": "4949421",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -14556,7 +14556,7 @@
         "school_id": "1",
         "student_id": "4949443",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -14675,7 +14675,7 @@
         "school_id": "1",
         "student_id": "4949537",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -14710,14 +14710,14 @@
         "school_id": "2",
         "student_id": "4949539",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4949344",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -14759,7 +14759,7 @@
         "school_id": "1",
         "student_id": "4951006",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -14836,14 +14836,14 @@
         "school_id": "3",
         "student_id": "4955279",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "2",
         "student_id": "4948910",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -14990,7 +14990,7 @@
         "school_id": "1",
         "student_id": "4949546",
         "user_id": "46",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15046,7 +15046,7 @@
         "school_id": "2",
         "student_id": "4949425",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15095,7 +15095,7 @@
         "school_id": "1",
         "student_id": "4949655",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15235,14 +15235,14 @@
         "school_id": "2",
         "student_id": "4949548",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4948434",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15326,7 +15326,7 @@
         "school_id": "1",
         "student_id": "4948498",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15431,7 +15431,7 @@
         "school_id": "3",
         "student_id": "4948985",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15445,7 +15445,7 @@
         "school_id": "2",
         "student_id": "4950302",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15459,7 +15459,7 @@
         "school_id": "1",
         "student_id": "4949473",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15487,7 +15487,7 @@
         "school_id": "1",
         "student_id": "4949479",
         "user_id": "61",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15515,7 +15515,7 @@
         "school_id": "3",
         "student_id": "4949936",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15606,7 +15606,7 @@
         "school_id": "1",
         "student_id": "4949410",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15627,7 +15627,7 @@
         "school_id": "1",
         "student_id": "4949479",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15655,7 +15655,7 @@
         "school_id": "2",
         "student_id": "4949377",
         "user_id": "38",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15725,7 +15725,7 @@
         "school_id": "1",
         "student_id": "4949596",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15809,7 +15809,7 @@
         "school_id": "1",
         "student_id": "4949409",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -15865,14 +15865,14 @@
         "school_id": "2",
         "student_id": "4950302",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "1",
         "student_id": "4948498",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -16033,7 +16033,7 @@
         "school_id": "1",
         "student_id": "4949654",
         "user_id": "74",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -16047,7 +16047,7 @@
         "school_id": "3",
         "student_id": "4951383",
         "user_id": "69",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -16082,7 +16082,7 @@
         "school_id": "2",
         "student_id": "4949444",
         "user_id": "12",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -16096,7 +16096,7 @@
         "school_id": "1",
         "student_id": "4952502",
         "user_id": "72",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -16299,7 +16299,7 @@
         "school_id": "1",
         "student_id": "4950680",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -16369,7 +16369,7 @@
         "school_id": "2",
         "student_id": "4950886",
         "user_id": "5",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -16383,14 +16383,14 @@
         "school_id": "3",
         "student_id": "4951382",
         "user_id": "36",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
         "school_id": "2",
         "student_id": "4949333",
         "user_id": "43",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -16418,7 +16418,7 @@
         "school_id": "1",
         "student_id": "4948434",
         "user_id": "41",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -16509,7 +16509,7 @@
         "school_id": "1",
         "student_id": "4949341",
         "user_id": "49",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {
@@ -16579,7 +16579,7 @@
         "school_id": "3",
         "student_id": "4949324",
         "user_id": "77",
-        "grade": "0",
+        "grade": "KN",
         "academic_year_id": "5"
     },
     {

@@ -10,15 +10,15 @@
         "assessment_id": "1",
         "academic_year_id": "1",
         "term": "Winter",
-        "date_open": "4/1/2018",
-        "date_close": "6/30/2018"
+        "date_open": "12/1/2017",
+        "date_close": "3/31/2018"
     },
     {
         "assessment_id": "1",
         "academic_year_id": "1",
         "term": "Spring",
-        "date_open": "12/1/2017",
-        "date_close": "3/31/2018"
+        "date_open": "4/1/2018",
+        "date_close": "6/30/2018"
     },
     {
         "assessment_id": "1",
@@ -31,15 +31,15 @@
         "assessment_id": "1",
         "academic_year_id": "2",
         "term": "Winter",
-        "date_open": "4/1/2019",
-        "date_close": "6/30/2019"
+        "date_open": "12/1/2018",
+        "date_close": "3/31/2019"
     },
     {
         "assessment_id": "1",
         "academic_year_id": "2",
         "term": "Spring",
-        "date_open": "12/1/2018",
-        "date_close": "3/31/2019"
+        "date_open": "4/1/2019",
+        "date_close": "6/30/2019"
     },
     {
         "assessment_id": "1",
@@ -52,15 +52,15 @@
         "assessment_id": "1",
         "academic_year_id": "3",
         "term": "Winter",
-        "date_open": "4/1/2020",
-        "date_close": "6/30/2020"
+        "date_open": "12/1/2019",
+        "date_close": "3/31/2020"
     },
     {
         "assessment_id": "1",
         "academic_year_id": "3",
         "term": "Spring",
-        "date_open": "12/1/2019",
-        "date_close": "3/31/2020"
+        "date_open": "4/1/2020",
+        "date_close": "6/30/2020"
     },
     {
         "assessment_id": "1",
@@ -73,15 +73,15 @@
         "assessment_id": "1",
         "academic_year_id": "4",
         "term": "Winter",
-        "date_open": "4/1/2021",
-        "date_close": "6/30/2021"
+        "date_open": "12/1/2020",
+        "date_close": "3/31/2021"
     },
     {
         "assessment_id": "1",
         "academic_year_id": "4",
         "term": "Spring",
-        "date_open": "12/1/2020",
-        "date_close": "3/31/2021"
+        "date_open": "4/1/2021",
+        "date_close": "6/30/2021"
     },
     {
         "assessment_id": "1",
@@ -94,14 +94,294 @@
         "assessment_id": "1",
         "academic_year_id": "5",
         "term": "Winter",
-        "date_open": "4/1/2022",
-        "date_close": "6/30/2022"
+        "date_open": "12/1/2021",
+        "date_close": "3/31/2022"
     },
     {
         "assessment_id": "1",
         "academic_year_id": "5",
         "term": "Spring",
+        "date_open": "4/1/2022",
+        "date_close": "6/30/2022"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "1",
+        "term": "Fall",
+        "date_open": "8/1/2017",
+        "date_close": "11/30/2017"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "1",
+        "term": "Winter",
+        "date_open": "12/1/2017",
+        "date_close": "3/31/2018"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "1",
+        "term": "Spring",
+        "date_open": "4/1/2018",
+        "date_close": "6/30/2018"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "2",
+        "term": "Fall",
+        "date_open": "8/1/2018",
+        "date_close": "11/30/2018"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "2",
+        "term": "Winter",
+        "date_open": "12/1/2018",
+        "date_close": "3/31/2019"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "2",
+        "term": "Spring",
+        "date_open": "4/1/2019",
+        "date_close": "6/30/2019"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "3",
+        "term": "Fall",
+        "date_open": "8/1/2019",
+        "date_close": "11/30/2019"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "3",
+        "term": "Winter",
+        "date_open": "12/1/2019",
+        "date_close": "3/31/2020"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "3",
+        "term": "Spring",
+        "date_open": "4/1/2020",
+        "date_close": "6/30/2020"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "4",
+        "term": "Fall",
+        "date_open": "8/1/2020",
+        "date_close": "11/30/2020"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "4",
+        "term": "Winter",
+        "date_open": "12/1/2020",
+        "date_close": "3/31/2021"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "4",
+        "term": "Spring",
+        "date_open": "4/1/2021",
+        "date_close": "6/30/2021"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "5",
+        "term": "Fall",
+        "date_open": "8/1/2021",
+        "date_close": "11/30/2021"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "5",
+        "term": "Winter",
         "date_open": "12/1/2021",
         "date_close": "3/31/2022"
+    },
+    {
+        "assessment_id": "2",
+        "academic_year_id": "5",
+        "term": "Spring",
+        "date_open": "4/1/2022",
+        "date_close": "6/30/2022"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "1",
+        "term": "Fall",
+        "date_open": "8/1/2017",
+        "date_close": "11/30/2017"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "1",
+        "term": "Winter",
+        "date_open": "12/1/2017",
+        "date_close": "3/31/2018"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "1",
+        "term": "Spring",
+        "date_open": "4/1/2018",
+        "date_close": "6/30/2018"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "2",
+        "term": "Fall",
+        "date_open": "8/1/2018",
+        "date_close": "11/30/2018"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "2",
+        "term": "Winter",
+        "date_open": "12/1/2018",
+        "date_close": "3/31/2019"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "2",
+        "term": "Spring",
+        "date_open": "4/1/2019",
+        "date_close": "6/30/2019"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "3",
+        "term": "Fall",
+        "date_open": "8/1/2019",
+        "date_close": "11/30/2019"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "3",
+        "term": "Winter",
+        "date_open": "12/1/2019",
+        "date_close": "3/31/2020"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "3",
+        "term": "Spring",
+        "date_open": "4/1/2020",
+        "date_close": "6/30/2020"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "4",
+        "term": "Fall",
+        "date_open": "8/1/2020",
+        "date_close": "11/30/2020"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "4",
+        "term": "Winter",
+        "date_open": "12/1/2020",
+        "date_close": "3/31/2021"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "4",
+        "term": "Spring",
+        "date_open": "4/1/2021",
+        "date_close": "6/30/2021"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "5",
+        "term": "Fall",
+        "date_open": "8/1/2021",
+        "date_close": "11/30/2021"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "5",
+        "term": "Winter",
+        "date_open": "12/1/2021",
+        "date_close": "3/31/2022"
+    },
+    {
+        "assessment_id": "16",
+        "academic_year_id": "5",
+        "term": "Spring",
+        "date_open": "4/1/2022",
+        "date_close": "6/30/2022"
+    },
+    {
+        "assessment_id": "13",
+        "academic_year_id": "1",
+        "term": "Fall",
+        "date_open": "8/1/2017",
+        "date_close": "11/30/2017"
+    },
+    {
+        "assessment_id": "13",
+        "academic_year_id": "1",
+        "term": "Spring",
+        "date_open": "4/1/2019",
+        "date_close": "6/30/2019"
+    },
+    {
+        "assessment_id": "13",
+        "academic_year_id": "2",
+        "term": "Fall",
+        "date_open": "8/1/2018",
+        "date_close": "11/30/2018"
+    },
+    {
+        "assessment_id": "13",
+        "academic_year_id": "2",
+        "term": "Spring",
+        "date_open": "4/1/2019",
+        "date_close": "6/30/2019"
+    },
+    {
+        "assessment_id": "13",
+        "academic_year_id": "3",
+        "term": "Fall",
+        "date_open": "8/1/2019",
+        "date_close": "11/30/2019"
+    },
+    {
+        "assessment_id": "13",
+        "academic_year_id": "3",
+        "term": "Spring",
+        "date_open": "4/1/2020",
+        "date_close": "6/30/2020"
+    },
+    {
+        "assessment_id": "13",
+        "academic_year_id": "4",
+        "term": "Fall",
+        "date_open": "8/1/2020",
+        "date_close": "11/30/2020"
+    },
+    {
+        "assessment_id": "13",
+        "academic_year_id": "4",
+        "term": "Spring",
+        "date_open": "4/1/2021",
+        "date_close": "6/30/2021"
+    },
+    {
+        "assessment_id": "13",
+        "academic_year_id": "5",
+        "term": "Fall",
+        "date_open": "8/1/2021",
+        "date_close": "11/30/2021"
+    },
+    {
+        "assessment_id": "13",
+        "academic_year_id": "5",
+        "term": "Spring",
+        "date_open": "4/1/2022",
+        "date_close": "6/30/2022"
     }
 ]

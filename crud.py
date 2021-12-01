@@ -315,6 +315,17 @@ def get_assessment_by_name(name):
     return Assessment.query.filter_by(name=name).first()
 
 
+def get_benchmark_by_assessment_id_grade_term(assessment_id, grade, term):
+    """Query benchmark to get instance with cutoff score"""
+
+    try:
+        benchmark = (Benchmark.query
+                                .filter(Benchmark.assessment_id==assessment_id, Benchmark.grade==grade, Benchmark.term==term)
+                                .one())
+    except NoResultFound:
+        benchmark = None
+
+    return benchmark
 
 
 def get_school_by_id(id):

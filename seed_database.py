@@ -236,11 +236,3 @@ with open("data/student_assessments.json") as f:
         student_assessments_in_db.append(student_assessment)
         
     f.close()
-
-
-# crud.create_student(4384193, 23131222026, 'Thu', 'Nguyen')
-# crud.create_student(4384194, 23131202455, 'Chaskin', 'Saroff')
-# crud.create_student(4384195, 23131202467, 'Loan', 'Truong')
-# crud.create_roster(2, 4384193, 49, '2', 5)
-# crud.create_roster(2, 4384194, 49, '2', 5)
-# crud.create_roster(2, 4384195, 49, '2', 5)

@@ -1,28 +1,33 @@
 {% extends 'base.html' %}
-{% block title %}Results for {{assessment.name}} assessment{% endblock %}
+{% block title %}Entries for {{assessment.name}} assessment{% endblock %}
 
 {% block body %}
 
-<h1>Assessment name: {{assessment.name}}</h1>
+<h1>Assessment: {{assessment.name}}</h1>
 
-<h2>Hello {{user.first_name}} {{user.last_name}} {{user.username}}</h2>
+<h2>Hello {{user.first_name}} {{user.last_name}}</h2>
+<h3>Grade {{grade}} {{term}} {{academic_year}}, Benchmark {{cutoff}}</h3>
 
     <table >
         <thead>
             <tr>
-            
-            <th>Student ID</th>
-            <th>Score</th>
-            <th>Exemption</th>
+                <th>Student ID</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Score</th>
+                <th>Level</th>
+                <th>Exemption</th>
             </tr>
         </thead>
         <tbody>
             {% for entry in entries %}
             <tr>
-            
-            <td>{{entry.student_id}}</td>
-            <td>{{entry.score}}</td>
-            <td>{{entry.exemption_id}}</td>
+                <td>{{entry.student_id}}</td>
+                <td>{{entry.first_name}}</td>
+                <td>{{entry.last_name}}</td>
+                <td>{{entry.score}}</td>
+                <td>{{entry.level}}</td>
+                <td>{{entry.exemption_id}}</td>
             </tr>
             {% endfor %}
         </tbody>
