@@ -30,15 +30,17 @@ def index():
         # schools and grades that this user teaches
         schools_grades = crud.get_schools_grades_for_teacher(user_id, academic_year.academic_year_id)
 
-        # Get assessments to display
+        # Get assessments selection to display on the dropdown
         assessments = crud.all_assessments()
         assessments = [assessment for assessment in assessments]
         assessments.sort(key=lambda assessment: assessment.name)
 
+        # Get schools selection to display on the dropdown
         schools = [school.school for school in schools_grades]
         schools = list(set(schools))
         schools.sort(key=lambda school: school.name)
         
+        # Get grades selection to display on the dropdown
         grades = [school.grade for school in schools_grades]
         grades = list(set(grades))
         grades.sort()
@@ -173,10 +175,8 @@ def record_entries(assessment_id):
         crud.create_student_assessment(sid, scoring_term.scoring_term_id, xid, 
                                     scores[i], benchmark.benchmark_id, date.today())
 
-    tests = crud.all_student_assessments()
-    print(tests)
 
-    return render_template('report.html', 
+    return render_template('entries.html', 
                             user=user,
                             assessment=assessment, 
                             entries=entries,
@@ -191,3 +191,17 @@ if __name__ == "__main__":
     connect_to_db(app)
 
     app.run(host="0.0.0.0", port=5001, debug=True)
+
+
+
+"""
+Need to:
+1. Address data entry capitalization
+2. Address grade and school dropdown
+4. Show scores across multiple terms
+
+3. Make updates to db not just add / create, display whatever is already filled
+
+5. Encrypt passwords
+
+"""

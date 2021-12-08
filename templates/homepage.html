@@ -16,19 +16,6 @@
           {% endfor %}
         </select>
 
-        <select name="grade" required>
-          {% if grades|length == 1 %}
-            {% for grade in grades %}
-              <option value={{grade}}>Grade {{grade}}</option>
-            {% endfor %}
-          {% else %}
-            <option value="">Select grade</option>
-            {% for grade in grades %}
-              <option value={{grade}}>Grade {{grade}}</option>
-            {% endfor %}
-          {% endif %}
-        </select>
-
         <select name="school_id" required>
           {% if schools|length == 1 %}
             {% for school in schools %}
@@ -38,6 +25,19 @@
             <option value="">Select school</option>
             {% for school in schools %}
               <option value={{school.school_id}}>{{school.name}}</option>
+            {% endfor %}
+          {% endif %}
+        </select>
+
+        <select name="grade" required>
+          {% if grades|length == 1 %}
+            {% for grade in grades %}
+              <option value={{grade}}>Grade {{grade}}</option>
+            {% endfor %}
+          {% else %}
+            <option value="">Select grade</option>
+            {% for grade in grades %}
+              <option value={{grade}}>Grade {{grade}}</option>
             {% endfor %}
           {% endif %}
         </select>
