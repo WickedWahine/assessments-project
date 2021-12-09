@@ -2,58 +2,62 @@
 {% block title %}Entering scores for {{assessment.name}} assessment{% endblock %}
 
 {% block body %}
-  
-  <h1>Assessment: {{assessment.name}}</h1>
-  <h2>Hello {{user.first_name}} {{user.last_name}}</h2>
-  <h3>Today is {{today}}, the students are grade {{grade}}</h3>
-  <div class="container-md">
-    {% if students %}
-    <form action="/assessment/{{assessment.assessment_id}}" method="POST" class="row gy-2 gx-3 align-items-center">
-        <table class="table table-hover">
-          <thead>
+
+<div class="container-md">
+  <h2>Assessment: {{assessment.name}}</h2>
+
+  <p>
+      <strong>Term</strong>: {{term}}<br/>
+      <strong>Academic year</strong>: {{academic_year}}<br/>
+      <strong>Grade</strong>: {{grade}}<br/>
+  </p>
+
+  {% if students %}
+  <form action="/assessment/{{assessment.assessment_id}}" method="POST" class="row gy-2 gx-3 align-items-center">
+      <table class="table table-hover">
+        <thead>
+          <tr class="row">
+            <th class="col-sm-4">Student Name</th>
+            <th class="col-sm-2">Student ID</th>
+            <th class="col-sm-2">Score</th>
+            <th class="col-sm-4">Exemption (if applicable)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for student in students %}
             <tr class="row">
-              <th class="col-sm-4">Student Name</th>
-              <th class="col-sm-2">Student ID</th>
-              <th class="col-sm-2">Score</th>
-              <th class="col-sm-4">Exemption (if applicable)</th>
+              <td class="col-sm-4">
+                <input class="form-control-plaintext fullname" type="text" value="{{student.first_name}}" name="first_name" aria-label="student first name" style="display: inline-block;
+                width: auto;" >
+                <input class="form-control-plaintext fullname" type="text" value="{{student.last_name}}" name="last_name" aria-label="student last name" style="display: inline-block;
+                width: auto;">
+              </td>
+              <td class="col-sm-2">
+                <input type="text" readonly class="form-control-plaintext" value="{{student.student_id}}" name="student_id" aria-label="student id">
+              </td>
+              <td class="col-sm-2">
+                  <input type="text" name="score" class="form-control" aria-describedby="assessmentScore">
+              </td>
+              <td class="col-sm-4">
+                <select class="form-select" name="exemption_id" aria-label="Dropdown to select exemption">
+                  <option value="">Select exemption</option>
+                  <option value="2">Absent for entire testing window</option>
+                  <option value="3">Alternate assessment per IEP</option>
+                </select>
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {% for student in students %}
-              <tr class="row">
-                <td class="col-sm-4">
-                  <!-- {{student.first_name}} {{student.last_name}}
-                  <input type="hidden" name="first_name" value="{{student.first_name}}">
-                  <input type="hidden" name="last_name" value="{{student.last_name}}"> -->
-                  
-                  <input class="form-control-plaintext fullname" type="text" value="{{student.first_name}}" name="first_name" aria-label="student first name" style="display: inline-block;
-                  width: auto;" >
-                  <input class="form-control-plaintext fullname" type="text" value="{{student.last_name}}" name="last_name" aria-label="student last name" style="display: inline-block;
-                  width: auto;">
-                </td>
-                <td class="col-sm-2">
-                  <input type="text" readonly class="form-control-plaintext" value="{{student.student_id}}">
-                </td>
-                <td class="col-sm-2">
-                    <input type="text" name="score" class="form-control" aria-describedby="assessmentScore">
-                </td>
-                <td class="col-sm-4">
-                  <select class="form-select" name="exemption_id" aria-label="Dropdown to select exemption">
-                    <option selected>Select exemption</option>
-                    <option value="2">Absent for entire testing window</option>
-                    <option value="3">Alternate assessment per IEP</option>
-                  </select>
-                </td>
-              </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-        <button type="submit" class="btn btn-primary">Save data</button>
-        <input type="hidden" name="username" value="{{user.username}}">
-        <input type="hidden" name="grade" value="{{grade}}">
-      </form>
-    {% else %}
-      <p>You do not have any students the selected grade and school this term. If you have any questions please contact "The One."</p>
-    {% endif %}
-  </div>
+          {% endfor %}
+        </tbody>
+      </table>
+      <button type="submit" class="btn btn-primary">Save data</button>
+      <input type="hidden" name="username" value="{{user.username}}">
+      <input type="hidden" name="grade" value="{{grade}}">
+      <p>Term: {{term}}</p>
+      <input type="hidden" name="term" value="{{term}}">
+    </form>
+  {% else %}
+    <p>You do not have any students the selected grade and school this term. If you have any questions please contact "The One."</p>
+  {% endif %}
+</div>
+
 {% endblock %}

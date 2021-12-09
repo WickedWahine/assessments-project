@@ -97,7 +97,11 @@ def students_by_teacher():
     username = session.get("username")
     user = crud.get_user_by_username(username)
 
+    # Get Academic Year given today's data
     academic_year = crud.get_academic_year_by_date(date.today())
+    # Get Scoring Term given Assessment ID and today's date
+    scoring_term = crud.get_scoring_term_by_assessment_id_and_date(assessment_id, date.today())
+
 
     students = crud.get_student_roster_by_teacher(user.user_id, school_id, grade, academic_year.academic_year_id)
     students = [student.student for student in students]
@@ -113,6 +117,8 @@ def students_by_teacher():
                             rosters=rosters, 
                             user=user, 
                             student_assessments=student_assessments, 
+                            academic_year=academic_year, 
+                            term=scoring_term.term, 
                             today=today,
                             grade=grade)
 
@@ -122,6 +128,8 @@ def record_entries(assessment_id):
     
     # Collect form data
     grade = request.form.get('grade')
+    term = request.form.get('term')
+    print("term",term)
     username = request.form.get('username')
     student_ids = request.form.getlist('student_id')
     first_names = request.form.getlist('first_name')
@@ -135,15 +143,16 @@ def record_entries(assessment_id):
     # Get Assessment by its ID
     assessment = crud.get_assessment_by_id(assessment_id)
 
-    # Get Scoring Term given Assessment ID and today's date
-    scoring_term = crud.get_scoring_term_by_assessment_id_and_date(assessment_id, date.today())
-
-    # Get benchmark by Assessment ID, Grade, Term, then get score cutoff
-    benchmark = crud.get_benchmark_by_assessment_id_grade_term(assessment.assessment_id, grade, scoring_term.term)
-    cutoff = benchmark.cutoff
-
     # Get academic year by today's date
     academic_year = crud.get_academic_year_by_date(date.today())
+
+    # Get Scoring Term given Assessment ID, Academic Year ID, and term
+    scoring_term = crud.get_scoring_term_by_assessment_id_and_academic_year_id_and_term(assessment_id, academic_year.academic_year_id, term)
+
+    # Get benchmark by Assessment ID, Grade, Term, then get score cutoff
+    benchmark = crud.get_benchmark_by_assessment_id_grade_term(assessment.assessment_id, grade, term)
+    print("benchmark",benchmark)
+    cutoff = benchmark.cutoff
 
     # Group student data within a list and add the data into the database
     entries = []
@@ -180,7 +189,7 @@ def record_entries(assessment_id):
                             user=user,
                             assessment=assessment, 
                             entries=entries,
-                            term=scoring_term.term,
+                            term=term,
                             academic_year=academic_year.year,
                             grade=grade,
                             cutoff=cutoff)

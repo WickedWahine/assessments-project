@@ -270,6 +270,21 @@ def get_scoring_term_by_assessment_id_and_date(assessment_id, date_taken):
     return scoring_term
 
 
+def get_scoring_term_by_assessment_id_and_academic_year_id_and_term(assessment_id, academic_year_id, term):  
+    """Query scoring term ID by assessment ID, academic year ID, and term"""
+
+    try:
+        scoring_term = (Scoring_Term.query
+                        .filter(Scoring_Term.assessment_id==assessment_id, 
+                        Scoring_Term.academic_year_id==academic_year_id, 
+                        Scoring_Term.term==term)
+                        .one())
+    except NoResultFound:
+        scoring_term = None
+
+    return scoring_term
+
+
 def get_user_by_username(username):
     """Query user ID by username"""
     
