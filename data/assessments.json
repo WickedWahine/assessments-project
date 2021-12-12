@@ -4,63 +4,11 @@
         "subject": "Literacy"
     },
     {
-        "name": "BAS Spanish",
-        "subject": "Literacy"
-    },
-    {
-        "name": "CAASPP",
-        "subject": "Literacy"
-    },
-    {
-        "name": "DRA",
-        "subject": "Literacy"
-    },
-    {
-        "name": "DRA Spanish",
-        "subject": "Literacy"
-    },
-    {
-        "name": "ELPAC",
-        "subject": "Literacy"
-    },
-    {
-        "name": "Gr 1 Math",
-        "subject": "Math"
-    },
-    {
-        "name": "KN Math",
-        "subject": "Math"
-    },
-    {
-        "name": "LLI",
-        "subject": "Literacy"
-    },
-    {
-        "name": "MDTP",
-        "subject": "Math"
-    },
-    {
-        "name": "NWEA",
-        "subject": "Math"
-    },
-    {
-        "name": "RazKids",
-        "subject": "Literacy"
-    },
-    {
-        "name": "TCRR",
-        "subject": "Literacy"
-    },
-    {
-        "name": "TCW",
-        "subject": "Literacy"
-    },
-    {
-        "name": "uPar",
-        "subject": "Literacy"
-    },
-    {
         "name": "BAS Mandarin",
+        "subject": "Literacy"
+    },
+    {
+        "name": "BAS Spanish",
         "subject": "Literacy"
     }
 ]

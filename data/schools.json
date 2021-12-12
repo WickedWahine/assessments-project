@@ -1,18 +1,18 @@
 [
     {
-        "name": "Addison Elementary",
-        "short_name": "Addison",
-        "letter_code": "AD"
+        "name": "Hogwarts School",
+        "short_name": "Hogwarts",
+        "letter_code": "HS"
     },
     {
-        "name": "Juana Briones Elementary",
-        "short_name": "Briones",
-        "letter_code": "JB"
+        "name": "Welton Academy",
+        "short_name": "Welton",
+        "letter_code": "WA"
     },
     {
-        "name": "Duveneck Elementary",
-        "short_name": "Duveneck",
-        "letter_code": "DV"
+        "name": "Xavier School",
+        "short_name": "Xavier",
+        "letter_code": "XS"
     },
     {
         "name": "District Office",

@@ -35,17 +35,25 @@ def index():
         assessments = [assessment for assessment in assessments]
         assessments.sort(key=lambda assessment: assessment.name)
 
+        # Get all schools & grades associated with teacher this year
+        associated_school_grade = []
+        for school in schools_grades:
+            associated_school_grade.append((school.school_id, school.school.name, school.grade))
+        associated_school_grade = list(set(associated_school_grade))
+        associated_school_grade.sort()
+
         # Get schools selection to display on the dropdown
-        schools = [school.school for school in schools_grades]
-        schools = list(set(schools))
-        schools.sort(key=lambda school: school.name)
+        # schools = [school.school for school in schools_grades]
+        # schools = list(set(schools))
+        # schools.sort(key=lambda school: school.name)
         
         # Get grades selection to display on the dropdown
-        grades = [school.grade for school in schools_grades]
-        grades = list(set(grades))
-        grades.sort()
+        # grades = [school.grade for school in schools_grades]
+        # grades = list(set(grades))
+        # grades.sort()
 
-        return render_template('homepage.html', assessments=assessments, schools=schools, grades=grades)
+        #return render_template('homepage.html', assessments=assessments, schools=schools, grades=grades)
+        return render_template('homepage.html', assessments=assessments, school_grade=associated_school_grade)
 
     return render_template('homepage.html')
 
@@ -60,12 +68,16 @@ def process_login():
     user = crud.get_user_by_username(username)
     
     if not user or user.password != password:
-        flash("The email or password you entered was incorrect.")
+        # Set message category at 2nd argument. Choices: success, info, warning, danger.
+        # This tells Bootstrap which alert to use
+        flash("The email or password you entered was incorrect.","danger")
         
     else:
         # Log in user by storing the user's email in session
         session["username"] = username
-        flash(f"Login successful!")
+        # Set message category at 2nd argument. Choices: success, info, warning, danger.
+        # This tells Bootstrap which alert to use
+        flash(f"Login successful!", "success")
 
     return redirect("/")
 
@@ -75,7 +87,9 @@ def process_logout():
     """Log user out"""
 
     session.pop("username", None)
-    flash("Log out successful!")
+    # Set message category at 2nd argument. Choices: success, info, warning, danger.
+    # This tells Bootstrap which alert to use
+    flash("Log out successful!", "success")
     
     return redirect("/")
 
@@ -85,14 +99,18 @@ def students_by_teacher():
 
     # If no user is logged in, reject request
     if not session.get("username"):
-        flash("Please log in first.")
+        # Set message category at 2nd argument. Choices: success, info, warning, danger.
+        # This tells Bootstrap which alert to use
+        flash("Please log in first.", "warning")
         return redirect("/")
 
     assessment_id = request.args.get("assessment_id")
     assessment = crud.get_assessment_by_id(assessment_id)
 
-    grade = request.args.get("grade")
-    school_id = request.args.get("school_id")
+    # = request.args.get("school_grade")
+    test = request.args.get("school_grade")
+    (school_id, grade) = test.split(',')
+    #school_id = request.args.get("school_id")
 
     username = session.get("username")
     user = crud.get_user_by_username(username)
@@ -101,25 +119,24 @@ def students_by_teacher():
     academic_year = crud.get_academic_year_by_date(date.today())
     # Get Scoring Term given Assessment ID and today's date
     scoring_term = crud.get_scoring_term_by_assessment_id_and_date(assessment_id, date.today())
-
-
+    
     students = crud.get_student_roster_by_teacher(user.user_id, school_id, grade, academic_year.academic_year_id)
     students = [student.student for student in students]
     students.sort(key=lambda student: student.first_name)
     
     student_assessments = [student.student_assessments for student in students]
-    rosters = [student.rosters for student in students]
+    #rosters = [student.rosters for student in students]
     today = date.today().strftime("%m/%d/%y")
 
     return render_template(f"/assessment.html", 
                             assessment=assessment, 
                             students=students, 
-                            rosters=rosters, 
+                            #rosters=rosters, 
                             user=user, 
                             student_assessments=student_assessments, 
                             academic_year=academic_year, 
                             term=scoring_term.term, 
-                            today=today,
+                            #today=today,
                             grade=grade)
 
 
@@ -129,7 +146,6 @@ def record_entries(assessment_id):
     # Collect form data
     grade = request.form.get('grade')
     term = request.form.get('term')
-    print("term",term)
     username = request.form.get('username')
     student_ids = request.form.getlist('student_id')
     first_names = request.form.getlist('first_name')
@@ -151,7 +167,6 @@ def record_entries(assessment_id):
 
     # Get benchmark by Assessment ID, Grade, Term, then get score cutoff
     benchmark = crud.get_benchmark_by_assessment_id_grade_term(assessment.assessment_id, grade, term)
-    print("benchmark",benchmark)
     cutoff = benchmark.cutoff
 
     # Group student data within a list and add the data into the database

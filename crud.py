@@ -308,7 +308,7 @@ def get_student_roster_by_teacher(user_id, school_id, grade, academic_year_id):
 
 def get_schools_grades_for_teacher(user_id, academic_year_id):
     """ Query to list schools and grades for a teacher during a given academic year.
-        Since roster is what ties then tgt, we use the object Roster.
+        Since roster is what ties then together, we use the object Roster.
     """
 
     schools_grades = (Roster.query
