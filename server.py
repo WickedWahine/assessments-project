@@ -39,20 +39,10 @@ def index():
         associated_school_grade = []
         for school in schools_grades:
             associated_school_grade.append((school.school_id, school.school.name, school.grade))
+
         associated_school_grade = list(set(associated_school_grade))
         associated_school_grade.sort()
 
-        # Get schools selection to display on the dropdown
-        # schools = [school.school for school in schools_grades]
-        # schools = list(set(schools))
-        # schools.sort(key=lambda school: school.name)
-        
-        # Get grades selection to display on the dropdown
-        # grades = [school.grade for school in schools_grades]
-        # grades = list(set(grades))
-        # grades.sort()
-
-        #return render_template('homepage.html', assessments=assessments, schools=schools, grades=grades)
         return render_template('homepage.html', assessments=assessments, school_grade=associated_school_grade)
 
     return render_template('homepage.html')
@@ -87,9 +77,7 @@ def process_logout():
     """Log user out"""
 
     session.pop("username", None)
-    # Set message category at 2nd argument. Choices: success, info, warning, danger.
-    # This tells Bootstrap which alert to use
-    flash("Log out successful!", "success")
+    # flash("Log out successful!", "success")
     
     return redirect("/")
 
@@ -108,14 +96,14 @@ def students_by_teacher():
     assessment = crud.get_assessment_by_id(assessment_id)
 
     # = request.args.get("school_grade")
-    test = request.args.get("school_grade")
-    (school_id, grade) = test.split(',')
+    school_grade = request.args.get("school_grade")
+    (school_id, grade) = school_grade.split(',')
     #school_id = request.args.get("school_id")
 
     username = session.get("username")
     user = crud.get_user_by_username(username)
 
-    # Get Academic Year given today's data
+    # Get Academic Year given today's date
     academic_year = crud.get_academic_year_by_date(date.today())
     # Get Scoring Term given Assessment ID and today's date
     scoring_term = crud.get_scoring_term_by_assessment_id_and_date(assessment_id, date.today())
@@ -125,18 +113,14 @@ def students_by_teacher():
     students.sort(key=lambda student: student.first_name)
     
     student_assessments = [student.student_assessments for student in students]
-    #rosters = [student.rosters for student in students]
-    today = date.today().strftime("%m/%d/%y")
 
     return render_template(f"/assessment.html", 
                             assessment=assessment, 
                             students=students, 
-                            #rosters=rosters, 
                             user=user, 
                             student_assessments=student_assessments, 
                             academic_year=academic_year, 
                             term=scoring_term.term, 
-                            #today=today,
                             grade=grade)
 
 
@@ -173,9 +157,15 @@ def record_entries(assessment_id):
     entries = []
 
     for i, sid in enumerate(student_ids):
+        
+        # Validate entry
+        if scores[i].upper() == "SUBA":
+            scores[i] = "subA"
+        else:
+            scores[i] = scores[i].upper()
 
         # Determine a student's level based on his/her score
-        if cutoff and scores[i]:
+        if cutoff and scores[i] in BAS_SCORES:
             if scores[i] < cutoff or scores[i] == "subA":
                 level = "Below"
             elif scores[i] == cutoff:
@@ -199,7 +189,6 @@ def record_entries(assessment_id):
         crud.create_student_assessment(sid, scoring_term.scoring_term_id, xid, 
                                     scores[i], benchmark.benchmark_id, date.today())
 
-
     return render_template('entries.html', 
                             user=user,
                             assessment=assessment, 
@@ -217,15 +206,14 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5001, debug=True)
 
 
-
 """
 Need to:
 1. Address data entry capitalization
-2. Address grade and school dropdown
 4. Show scores across multiple terms
-
+6. Allow download
 3. Make updates to db not just add / create, display whatever is already filled
-
+7. Accept Google authentication
 5. Encrypt passwords
-
+8. Enable sorting, filtering
+9. Warn if have not saved
 """

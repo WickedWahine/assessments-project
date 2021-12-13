@@ -60,7 +60,7 @@ class Benchmark(db.Model):
     assessment = db.relationship("Assessment", backref="benchmark")
 
     def __repr__(self):
-        return f'<Benchmark grade={self.grade} term={self.term} level={self.level} cutoff={self.cutoff}>'
+        return f'<Benchmark grade={self.grade} term={self.term} level={self.level} cutoff={self.cutoff} assessment_id={self.assessment_id}>'
 
 
 class Exemption(db.Model):
@@ -115,7 +115,7 @@ class Roster(db.Model):
     user = db.relationship("User", backref="rosters")
 
     def __repr__(self):
-        return f'<Roster student_id={self.student_id} user_id={self.user_id} grade={self.grade}>'
+        return f'<Roster school_id={self.school_id} student_id={self.student_id} user_id={self.user_id} grade={self.grade} academic_year_id={self.academic_year_id}>'
 
 
 class School(db.Model):
@@ -156,7 +156,7 @@ class Scoring_Term(db.Model):
     academic_year = db.relationship("Academic_Year", backref="scoring_terms")
 
     def __repr__(self):
-        return f'<Scoring_Term scoring_term_id={self.scoring_term_id} term={self.term} date_open={self.date_open}>'
+        return f'<Scoring_Term scoring_term_id={self.scoring_term_id} assessment_id={self.assessment_id} academic_year_id={self.academic_year_id} term={self.term} date_open={self.date_open}>'
 
 
 class Student(db.Model):
@@ -201,7 +201,7 @@ class Student_Assessment(db.Model):
     exemption = db.relationship("Exemption", backref="student_assessments")
 
     def __repr__(self):
-        return f'<Student_Assessment student_id={self.student_id} score={self.score} date_taken={self.date_taken}>'
+        return f'<Student_Assessment student_id={self.student_id} scoring_term_id={self.scoring_term_id} exemption_id={self.exemption_id} score={self.score} date_taken={self.date_taken}>'
 
 
 class User(db.Model):

@@ -296,7 +296,7 @@ def get_user_by_username(username):
 
 def get_student_roster_by_teacher(user_id, school_id, grade, academic_year_id):
     """ Query to list students by teacher, school, grade, academic year.
-        Since roster is what ties then tgt, we use the object Roster.
+        Since roster is what ties them tgt, we use the object Roster.
     """
 
     student_roster = (Roster.query
@@ -304,6 +304,17 @@ def get_student_roster_by_teacher(user_id, school_id, grade, academic_year_id):
                     .all())
 
     return student_roster
+
+
+def get_all_students_by_teacher(user_id, academic_year_id):
+    """ Query to list all students that the teacher teaches during the year.
+    """
+
+    all_roster = (Roster.query
+                    .filter_by(user_id=user_id, academic_year_id=academic_year_id)
+                    .all())
+
+    return all_roster
 
 
 def get_schools_grades_for_teacher(user_id, academic_year_id):
@@ -473,7 +484,6 @@ def get_user_by_active_status(active_status):
     """Query user by status"""
 
     return User.query.filter_by(active_status=active_status)
-
 
 
 if __name__ == '__main__':
