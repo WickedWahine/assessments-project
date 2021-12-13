@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}Entries for {{assessment.name}} assessment{% endblock %}
+
+{% block body %}
+  <div class="container-md">
+    <h2>Assessment: {{assessment.name}}</h2>
+
+    <div class="metabox">
+      <p>
+        <strong>Term</strong>: {{term}}<br/>
+        <strong>Academic year</strong>: {{academic_year}}<br/>
+        <strong>Grade</strong>: {{grade}}<br/>
+        <strong>Benchmark</strong>: {{cutoff}}
+      </p>
+    </div>
+
+    <table class="table table-sm table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Score</th>
+          <th>Level</th>
+          <th>Exemption 
+            <!-- Add tooltip to remind teachers what these entries mean -->
+            <a href="#" style="text-decoration: none; color: red;" data-toggle="tooltip" 
+            title="'2' is for Absent for entire testing window, '3' is for Alternate assessment per IEP.">
+              <sup>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" 
+                class="bi bi-info-circle" viewBox="0 0 16 16" aria-label="Info">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                </svg>
+              </sup>
+            </a>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entry in entries %}
+          <tr>
+            <td>{{entry.student_id}}</td>
+            <td>{{entry.first_name}}</td>
+            <td>{{entry.last_name}}</td>
+            <td>{{entry.score}}</td>
+            <td>{{entry.level}}</td>
+            <td>{{entry.exemption_id}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
