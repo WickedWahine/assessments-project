@@ -1,45 +1,18 @@
 {% extends 'base.html' %}
 {% block title %}Thing 4 Assessment - Home{% endblock %}
-
 {% block body %}
   
-  <div class="container-md">
-    {% if session.get("username") %}
-      
-      <h2>Welcome {{session["username"]}}!</h2>
+  {% if session.get("username") %}
 
+    <div class="container-md">
       {% if not school_grade %}
-        <p>You do not have any students in the selected grade and school this term. If you have any questions please contact "The One."</p>
+        <p>You do not have any students in the selected grade and school this term.</p>
       {% else %}
-        <form action="/assessment/" method="GET">
-          
-          <select name="assessment_id" class="btn dropdown-toggle" required>
-            <option value="">Select assessment</option>
-            {% for assessment in assessments %}
-              <option value="{{assessment.assessment_id}}">{{assessment.name}}</option>
-            {% endfor %}
-          </select>
-        
-          <select name="school_grade" class="btn dropdown-toggle" required>
-            {% if school_grade|length == 1 %}
-              <option value={{school_grade[0][0]}},{{school_grade[0][2]}} selected>{{school_grade[0][1]}} grade {{school_grade[0][2]}}</option>
-            {% else %}
-              <option value="">Select school and grade</option>
-              {% for n in range(school_grade|length) %}
-                <option value={{school_grade[n][0]}},{{school_grade[n][2]}}>{{school_grade[n][1]}} grade {{school_grade[n][2]}}</option>
-              {% endfor %}
-            {% endif %}
-          </select>
-        
-          <button class="btn btn-block" type="submit" style="background-color: #F4CB06;">Submit</button>
-            
-        </form>
-      {% endif %}
-    {% else %}
+      
       <section class="vh-100" >
         <div class="container py-5 h-100">
-          <div class="row d-flex justify-content-center h-100">
-            <div class="col col-lg-8">
+          <div class="row d-flex justify-content-center h-100" >
+            <div class="col col-lg-8" style="padding-top: 150px;">
               <div class="card" style="border-radius: 1rem;" >
                 <div class="row g-0">
 
@@ -50,22 +23,38 @@
                   <div class="col-md-6 col-md-7 d-flex align-items-center">
                     <div class="card-body p-4 p-lg-5 text-black;" >
 
-                      <form action="/login" method="POST">
+                      <form action="/assessment/" method="GET">
 
-                        <h3 class="mb-3 pb-3" style="letter-spacing: 1px; padding-top: 20px;">Sign into your account</h2>
-
+                        <h2 class="mb-3 pb-3" style="letter-spacing: 1px; padding-top: 20px;">
+                          Welcome {{user.first_name}} {{user.last_name}}!
+                        </h2>
+                      
+                        <p>Please select the assessment and class you would like to work on:</p>
+                        
                         <div class="form-outline mb-3">
-                          <input type="email" name="username" class="form-control" />
-                          <label class="form-label" >Email address</label>
+                          <select name="assessment_id" class="btn dropdown-toggle" required>
+                            <option value="">Select assessment</option>
+                            {% for assessment in assessments %}
+                              <option value="{{assessment.assessment_id}}">{{assessment.name}}</option>
+                            {% endfor %}
+                          </select>
                         </div>
 
                         <div class="form-outline mb-4">
-                          <input type="password" name="password" class="form-control" />
-                          <label class="form-label" >Password</label>
+                          <select name="school_grade" class="btn dropdown-toggle" required>
+                            {% if school_grade|length == 1 %}
+                              <option value={{school_grade[0][0]}},{{school_grade[0][2]}} selected>{{school_grade[0][1]}} grade {{school_grade[0][2]}}</option>
+                            {% else %}
+                              <option value="">Select school and grade</option>
+                              {% for n in range(school_grade|length) %}
+                                <option value={{school_grade[n][0]}},{{school_grade[n][2]}}>{{school_grade[n][1]}} grade {{school_grade[n][2]}}</option>
+                              {% endfor %}
+                            {% endif %}
+                          </select>
                         </div>
 
                         <div class="pt-1 mb-4">
-                          <button class="btn btn-block" type="submit" style="background-color: #F4CB06;">Login</button>
+                          <button class="btn btn-block" type="submit" style="background-color: #F4CB06;">Submit</button>
                         </div>
 
                       </form>
@@ -79,6 +68,28 @@
           </div>
         </div>
       </section>
-    {% endif %}
-  </div>
+      {% endif %}
+    </div>
+  {% else %}
+
+    <style>
+      body {
+        padding-top: 0;
+      }
+      .navbar:not(.top-nav-collapse) {
+        background: transparent !important;
+      }
+    </style>
+    
+    <video playsinline autoplay muted loop>
+      <source src="/static/video/pressmaster.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay">
+      <h2 class="splash">Capture what counts</h2>
+      <!-- <hr class="hr-light my-4 w-75"> -->
+      <h3 class="splash">Better data for<br/>better education</h3>
+    </div>
+    
+  {% endif %}
 {% endblock %}

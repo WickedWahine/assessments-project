@@ -21,14 +21,14 @@ def index():
     
     # If there's a user logged in, show choices for next step
     if session.get("username"):
-        user_id = crud.get_user_by_username(session["username"]).user_id
+        user = crud.get_user_by_username(session["username"])
 
         # Use today's date to determine academic year
         academic_year = crud.get_academic_year_by_date(date.today())
 
         # Using logged in user info + academic year to get a list of
         # schools and grades that this user teaches
-        schools_grades = crud.get_schools_grades_for_teacher(user_id, academic_year.academic_year_id)
+        schools_grades = crud.get_schools_grades_for_teacher(user.user_id, academic_year.academic_year_id)
 
         # Get assessments selection to display on the dropdown
         assessments = crud.all_assessments()
@@ -43,7 +43,7 @@ def index():
         associated_school_grade = list(set(associated_school_grade))
         associated_school_grade.sort()
 
-        return render_template('homepage.html', assessments=assessments, school_grade=associated_school_grade)
+        return render_template('homepage.html', user=user, assessments=assessments, school_grade=associated_school_grade)
 
     return render_template('homepage.html')
 
@@ -65,10 +65,7 @@ def process_login():
     else:
         # Log in user by storing the user's email in session
         session["username"] = username
-        # Set message category at 2nd argument. Choices: success, info, warning, danger.
-        # This tells Bootstrap which alert to use
-        flash(f"Login successful!", "success")
-
+        
     return redirect("/")
 
 
@@ -188,6 +185,8 @@ def record_entries(assessment_id):
         # Add newly entered data to database
         crud.create_student_assessment(sid, scoring_term.scoring_term_id, xid, 
                                     scores[i], benchmark.benchmark_id, date.today())
+        
+    flash("Thank you, your entries have been saved.", "success")
 
     return render_template('entries.html', 
                             user=user,
