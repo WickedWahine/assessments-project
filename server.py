@@ -215,4 +215,7 @@ Need to:
 5. Encrypt passwords
 8. Enable sorting, filtering
 9. Warn if have not saved
+10. Do JS validation
+11. Make assessment selection be on the same page as assessment
+12. Add about page
 """
